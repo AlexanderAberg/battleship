@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#logo {
+    font-size: 5em;
+    font-family: "Jacquard 12", system-ui;
+}
+
+.gameboard {
+    background-color: rgb(205, 16, 16);
+    display: grid;
+    gap: 2px;
+    padding: 10px 0;
+    grid-template-areas: 24px;
+}
+
+
+.gameboard>div {
+    background-color: blue;
+    padding: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}

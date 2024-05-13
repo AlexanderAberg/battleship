@@ -25,7 +25,10 @@
 <body>
     <h1 id='logo'>Battleship</h1>
 
-    <a id='scoreboard'></a>
+    <div class='victory-board'>
+        <p class='battles'>Victories <span id=victory>0</span></p>
+        <p class='battles'>Defeats <span id=defeat>0</span></p>
+    </div>
 
     <div class='game-board' id='game-board1'>
         <div class=item-a>
@@ -151,15 +154,13 @@
     </div>
 
 
-    <a class='ships-left-container'></a>
-
-    <a class='ships-left'></a>
-
-    <a id='carrier'></a>
-    <a id='battleship'></a>
-    <a id='cruiser'></a>
-    <a id='submarine'></a>
-    <a id='destroyer'></a>
+    <div class='ships-left-container'></div>
+    <div class='ships-left'></div>
+    <div id='carrier'></div>
+    <div id='battleship'></div>
+    <div id='cruiser'></div>
+    <div id='submarine'></div>
+    <div id='destroyer'></div>
 
     <div class='game-board' id='game-board2'>
         <div class=item-a>

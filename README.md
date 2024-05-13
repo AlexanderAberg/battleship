@@ -1,112 +1,190 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleship
 
-Welcome Alexander Åberg,
+Different Coloured Tea is a website to spread awareness to tea drinkers that only had black tea or black and green tea.
+The visitor will find out that there is other tea than black and green tea also red (rooibos), white, yellow, blue and purple tea, I will also mention Oolong tea that is often a bit grayish brown with a hint of yellow often called in between black and green, the site does not plan to mention for example the huge quantity of tea from each colour or herbal tea, it will also include pictures of the different colours.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+<img src="assets/images/amiresponsive.png" alt="Responsive Screens">
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **April 26, 2024**
+# UX
+### Visitor Goals
+The expected visitor is:
+- Visitors that like tea and want to broaden their horizon.
+- Visitors that are curious what is out there in the world of tea.
+- Visitors that wants to know more and therefore will contact us.
 
-## Gitpod Reminders
+Visitors goals are:
+- See pictures and information about colourful tea and get inspired.
+- To see what exists in the world of tea.
+- Contact the people behind the website.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+How Different Coloured Tea fills the needs:
+- You can see the coloured tea on the pictures right at the landing page and also on the Contact Form.
+- About Tea has some short information about the different coloured tea.
+- The Contact Us page makes it possible to contact us.
+- Easy to reach everything form the header and you can find our social media in the footer, you also see the footer all the time.
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+### Business Goals
+The Business Goals are:
+- Spread awareness of the more uncommon tea colours.
+- Get in touch with other tea drinkers that are not satisfied with your normal tea.
+- If enough people will be aware the bigger chance that you will find the more rare tea in your city.
 
-Another blue button should appear to click: _Open Browser_.
+### User Stories
+1. As a curious tea drinker I expect to find out about different kind of tea.
+0. I expect to get in touch with other people with my interest in more rare tea colours.
+0. I expect to be able to have a reference so I can spread awareness myself
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
 
-A blue button should appear to click: _Make Public_,
+### Existing Features
 
-Another blue button should appear to click: _Open Browser_.
+- __Header__
+  - Header has a menu with a nav bar or text on bigger screens and the website name in h1.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+<img src="assets/images/header.png" alt="Header">
 
-To log into the Heroku toolbelt CLI:
+- __Navigation Bar__
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+  - The navigation bar can be found on all 3 pages and is fully responsive, it will turn between a bar or buttons depending on the size of the screen.
+  - The bar will be visible even if you scroll down. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+<img src="assets/images/navbar.png" alt="Nav bar">
 
-------
+- __The landing page images__
 
-## Release History
+  - The landing page or "Home" has 8 different coloured tea on it, with 1-2 pictures in a row depending on screen size and it is fully responsive in image size also. 
+  - This page will make the visitor see all kind of colours on tea that they might not know that it existed.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<img src="assets/images/landingpage.png" alt="Landing Page">
 
-**April 26 2024:** Update node version to 16
+- __About Tea__
 
-**September 20 2023:** Update Python version to 3.9.17.
+  - About Tea page will give a short description of the different coloured tea. 
+  - I have put different coloured background behind every div related to a specific tea colour, it should be the same main colour as the tea but with a more friendly palette. 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<img src="assets/images/abouttea.png" alt="About Tea">
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- __Contact Us__
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+  - The Contact Us page has a contact form and a background picture that is fully responsive. 
+  - The form has a background with an opacity to make it see through while still making the text easy to read. 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<img src="assets/images/contactus.png" alt="Contact Us">
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- __The Footer__ 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+  - The footer can always be seen and has logos with links to Facebook, YouTube, Instagram and X. 
+  - The footer is both responsive and all the links works.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<img src="assets/images/footer.png" alt="Footer">
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Features Left to Implement
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- I wanted to make an event information, also to get links from every picture on Home to the correct line in About Tea, make buttons change colour when marked, creating a couple of icons and maybe something more that I haven't thought about.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Testing 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+I have tested all links and buttons including navbar and they all work, the form also work and requires an email in email field, one of the radio buttons and the name fields filled in, but checkbox is optional.
+I have tested on Chrome, Firefox and Edge without a problem, checked on many different sized from about 280p to 2000 px wide and 400px to about 2000 px high and didn't find any problems with the responsiveness.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Validator Testing 
 
-------
+- HTML
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Falexanderaberg.github.io%2FDifferent-Coloured-Tea%2Findex.html) Also checked About Tea and Contact Us pages without any errors.
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falexanderaberg.github.io%2FDifferent-Coloured-Tea%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv) it got validated as CSS Stage 3 +SVG!
 
-## FAQ about the uptime script
+<img src="assets/images/validator-index.html.png" alt="Validator Index.html">
+<img src="assets/images/validator-about-tea.html.png" alt="Validator About Tea.html">
+<img src="assets/images/validator-contact-us.html.png" alt="Validator Contact Us.html">
+<img src="assets/images/validator-style.css.png" alt="Validator Style.css.html">
 
-**Why have you added this script?**
+### Unfixed and fixed Bugs
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- Solved all known bugs, except for the blue background behind the submit button in the form on the Contact Us page on phones (tested on iPhone 13 Pro), it looks correct in Google Dev Tools.
+- I Had some issues with fixing the header and did it with the help of a tutor same thing with photos on larger screens which you can see in the css.
+- I did much trial and error with forms, pictures, header and footer and went through many colours on About Tea until my mentor suggested that I use the tea colour as background which made it possible to have text and background fit together better, I also did choose black as background for menu bar and contact form, the contact form I still wanted to see the background through which I sorted with the help of opacity.
+- I also got some help from my slack team for the header.
 
-**How will this affect me?**
+- I would say that the header is by far what I had biggest problems with and the responsivness on larger screens for images on home.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Quality Score through Google Devtools Lighthouse
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- Lighthouse testing on Chrome Incognito to prevent cookies and background cache to slow down.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<img src="assets/images/lighthouse-index-phone.png" alt="Lighthouse Index Phone">
+<img src="assets/images/lighthouse-index-computer.png" alt="Lighthouse Index Computer">
+<img src="assets/images/lighthouse-abouttea-phone.png" alt="Lighthouse About Tea Phone">
+<img src="assets/images/lighthouse-abouttea-computer.png" alt="Lighthouse About Tea Computer">
+<img src="assets/images/lighthouse-contactus-phone.png" alt="Lighthouse Contact Us Phone">
+<img src="assets/images/lighthouse-contactus-computer.png" alt="Lighthouse Contact Us Computer">
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Deployment
 
-**Can I opt out?**
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+  - You can either copy the link for Code or Open in a new repository or see the live version under Deployment to the right under github-pages.
+  - In GitHub you can open every seperate file including html. css. images and even favicons and see the folder structure.
+  - It is possible to check the commit history in github-pages under Deployment to the right
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+  - Link to the live version of the project can be found here: - https://github.com/AlexanderAberg/Different-Coloured-Tea.git
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+## Credits 
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Favicon from  <a href="https://www.freepik.com/icon/herbal-tea_10812632#fromView=search&page=1&position=54&uuid=24e50b5d-d56e-4b71-a971-f5a242ddc937">Icon by Satawat Anukul</a> and generated through https://favicon.io/favicon-converter/ 
 
----
+- Both got code and got inspired by Code Institutes Love Running Project and Coders Coffeehouse Project, including header and nav-menu.
+- Also got help, inspiration and support from my mentor Rory Patrick and help with code from a few Tutors at Code Institute.
+- Got inspiration and some help from our Slack Team Group especially Lorenz.
+- Template for this README is taken from Love Running and from my mentors project Horizon.
 
-Happy coding!
+
+### Content 
+
+- Information is taken from tea pages and Wikipedia during the years.
+- All html and css was taken from the Code Institute education, big part from Love Running, Coders Coffeehouse and their Tutors
+- The icons in the footer and the menu-bar were taken from [Font Awesome](https://fontawesome.com/)
+
+### Media
+
+- Favicon is from https://www.freepik.com/icon/battleship_7445202#fromView=search&page=1&position=24&uuid=1fab3cff-7977-4766-8a3e-e89762b82c90 and converted from https://favicon.io/favicon-converter/ 
+- Responsive mockup from https://ui.dev/amiresponsive?url=https://alexanderaberg.github.io/Different-Coloured-Tea/ 
+
+### Wireframe
+
+- Used Balsamiq for Wireframe, the Wireframe has some content that is missing in the project because of lack of time, see also Features Left to Implement in this README, the pictures became also better than expected so therefore will wireframe for home have more images on row and different setup than the actual project also the wireframe is not to scale especially computer.
+
+<img src="assets/images/wireframe-phone.png" alt="Wireframe for Phone">
+<img src="assets/images/wireframe-tablet.png" alt="Wireframe for Tablet">
+<img src="assets/images/wireframe-computer.png" alt="Wireframe for Computer">
+
+### Technologies Used
+
+- HTML - For how the website with the pages is built and planned 
+- CSS - For all the styling
+- Images  - Freepik for Pictures except for purple tea that I got from bluetea mentioned in media
+- Fonts - From Google Fonts
+- Icons - From Fontawesome 
+- Education Tool- From the people at Codeinstitute
+- Wireframe - From Balsamiq 
+- Favicons - Icon from freepik and converted with Favicon.io
+- Mockup - Generated at amiresponsive 
+- Colours I mostly tested what fit together and got help from Lighthouse in Google dev tools to see if I should adjust further 
+- Google Devtools to check responsiveness and to check Lighthouse for Accessibility
+- GitHub for storing the project and deploying it
+- Gitpod for project development
+
+### Colours & Text
+
+- Did choose dark colours for header, footer, menu etc. to fit with the pictures and wanted the background of the h2 in Home and the form in Contact Us to have opacity so you can see through without covering the images completely.
+- The colour for About Tea is pastel colour to make it friendlier to the eyes compared to sharp colours, the white and black doesn't really exist as pastel so I tried to make them friendlier also which you can see on the colours and in the css picture below.
+- Used Font style that is seperate between the logo, h1 and h2 compared to h3 and text with backup font for browsers without the font, the text colour in general is supposed to fit very well with the background colours that is why the background colour for tea has white text except for black that instead has white text.
+
+<img src="assets/images/colours.png" alt="Pastel Colours">
+<img src="assets/images/colours.png" alt="Pastel Colours">

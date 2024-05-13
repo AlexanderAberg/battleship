@@ -15,6 +15,10 @@ body {
     gap: 2px;
     padding: 10px 0;
     grid-template-areas: 24px;
+    justify-content: space-evenly;
+    height: 250px;
+    width: 250px;
+    align-content: space-between;
 }
 
 

@@ -81,10 +81,11 @@ h2 {
 }
 
 .item-b>div {
-    border: 1px solid blue;
+    border: 1px solid black;
     width: 24px;
     height: 24px;
-
+    background-color: blue;
+    color: blue;
 }
 
 

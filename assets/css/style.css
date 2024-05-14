@@ -39,9 +39,11 @@ body {
 }
 
 .item-a>div {
-    border: 2px solid blue;
-    width: 5vw;
-
+    border: 1px solid black;
+    width: 24px;
+    height: 24px;
+    background-color: blue;
+    color: blue;
 }
 
 .item-b {
@@ -49,8 +51,9 @@ body {
 }
 
 .item-b>div {
-    border: 2px solid blue;
-    width: 5vw;
+    border: 1px solid blue;
+    width: 24px;
+    height: 24px;
 
 }
 

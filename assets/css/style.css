@@ -2,14 +2,31 @@
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(197, 202, 201);
 }
 
 #logo {
-    font-size: 5em;
+    font-size: 4.7em;
     font-family: "Jacquard 12", system-ui;
 }
 
+h2 {
+    padding-left: 30%;
+}
+
+.victory-board {
+    border: 2px solid darkmagenta;
+    border-width: 3px;
+    margin: 10px auto;
+    width: 285px;
+    font-size: 1rem;
+    max-height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .game-board {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,9 +35,7 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(10, 10px);
-
     grid-template-rows: repeat(10, 10px);
-
     gap: 5px;
 
 }
@@ -44,6 +59,17 @@ body {
     height: 24px;
     background-color: blue;
     color: blue;
+}
+
+.ships-left {
+    border: 2px solid darkmagenta;
+    border-width: 3px;
+    margin: 10px auto;
+    width: 285px;
+    font-size: 1rem;
+    max-height: 100px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .item-b {

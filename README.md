@@ -140,7 +140,7 @@ I have tested on Chrome, Firefox and Edge without a problem, checked on many dif
 Favicon from  <a href="https://www.freepik.com/icon/herbal-tea_10812632#fromView=search&page=1&position=54&uuid=24e50b5d-d56e-4b71-a971-f5a242ddc937">Icon by Satawat Anukul</a> and generated through https://favicon.io/favicon-converter/ 
 
 - Boards are created with the help of tutorial from W3schools, https://www.w3schools.com/css/css_grid.asp https://www.w3schools.com/css/css_grid_container.asp and https://www.w3schools.com/css/css_grid_item.asp.
-- Also got help, inspiration and support from my mentor Rory Patrick and help with code from a few Tutors at Code Institute.
+- The Tutor Roman helped me with the grid, it is mainly my own code but with his help.
 - Got inspiration and some help from our Slack Team Group especially Lorenz.
 - Template for this README is taken from Love Running and from my mentors project Horizon.
 

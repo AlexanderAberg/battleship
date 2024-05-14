@@ -72,6 +72,10 @@ h2 {
     justify-content: space-evenly;
 }
 
+#destroyer {
+    padding-bottom: 10px;
+}
+
 .item-b {
     display: flex;
 }

@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', function () {});
 
 let squares = document.getElementsByClassName('square');
-console.log(squares);
 
 for (let square of squares) {
     square.addEventListener('click', function () {
@@ -16,11 +15,26 @@ for (let square of squares) {
     })
 }
 
+let ships = [carrier, battleship, cruiser, submarine, destroyer];
+
+const width = 10;
+shipLocation();
+shipLocation();
+shipLocation();
+shipLocation();
+shipLocation();
 //Placement of computer ships
 function shipLocation() {
-    let location;
-    let randomStartIndex = Math.floor(Math.random() * width * width)
-    document.getElementsByClassName('ships-container')
+    let randomStartIndex = Math.floor(Math.random() * width * width);
+
+    if (!squares[randomStartIndex].classList.contains('ships')) {
+
+
+        squares[randomStartIndex].classList.add('ships');
+        squares[randomStartIndex].style.backgroundColor = 'green';
+    } else {
+        shipLocation()
+    }
 }
 
 //Hit or miss a ship

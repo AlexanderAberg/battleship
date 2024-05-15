@@ -14,8 +14,20 @@ for (let button of buttons) {
     }
 }
 
+//Placement of computer ships
 function () {
     let location;
     let randomStartIndex = Math.floor(Math.random() * width * width)
     document.getElementsByClassName('ships-container')
+}
+
+//Hit or miss a ship
+function didHit() {
+    let isShip = userFire === userHit[0];
+
+    if (isShip) {
+        alert(You hit a ship);
+    } else {
+        alert('You missed');
+    }
 }

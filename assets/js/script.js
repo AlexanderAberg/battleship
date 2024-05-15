@@ -5,7 +5,12 @@ let squares = document.getElementsByClassName('square');
 
 for (let square of squares) {
     square.addEventListener('click', function () {
-        square.style.backgroundColor = 'red';
+        if (square.classList.contains('ships')) {
+            square.style.backgroundColor = 'red';
+            didHit();
+        } else {
+            square.style.backgroundColor = 'black';
+        }
         //   if (this.getAttribute('data-type') === 'submit') {
         //    alert('You clicked Submit!');
         //   } else {

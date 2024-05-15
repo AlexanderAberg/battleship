@@ -1,19 +1,19 @@
+/* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
 
+/* Design related to the overall page */
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(197, 202, 201);
 }
 
+/* Log info */
 #logo {
     font-size: 4.7em;
     font-family: "Jacquard 12", system-ui;
 }
 
-h2 {
-    padding-left: 30%;
-}
-
+/* Container for victories and defeats */
 .victory-board {
     border: 2px solid darkmagenta;
     border-width: 3px;
@@ -25,6 +25,7 @@ h2 {
     justify-content: space-evenly;
 }
 
+/* Game board 1 related items */
 .game-board {
     box-sizing: border-box;
     display: flex;
@@ -32,6 +33,7 @@ h2 {
     align-items: center;
 }
 
+/* Grid related items */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(10, 24px);
@@ -61,6 +63,12 @@ h2 {
     color: blue;
 }
 
+/* Heading for ships board container */
+h2 {
+    padding-left: 30%;
+}
+
+/* Container board about ships left */
 .ships-left {
     border: 2px solid darkmagenta;
     border-width: 3px;
@@ -72,10 +80,7 @@ h2 {
     justify-content: space-evenly;
 }
 
-#destroyer {
-    padding-bottom: 10px;
-}
-
+/* Commenting out board 2 related code
 .item-b {
     display: flex;
 }
@@ -87,11 +92,14 @@ h2 {
     background-color: blue;
     color: blue;
 }
+*/
 
+/* Ships information */
 #destroyer {
     height: 24px;
     width: 24px;
     background-color: black;
+    padding-bottom: 10px;
 }
 
 #submarine {

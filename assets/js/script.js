@@ -19,15 +19,17 @@ for (let square of squares) {
         //   }
     })
 }
-
+// The ships
 let ships = [carrier, battleship, cruiser, submarine, destroyer];
 
+//Computer ships placement
 const width = 10;
 shipLocation();
 shipLocation();
 shipLocation();
 shipLocation();
 shipLocation();
+
 //Placement of computer ships
 function shipLocation() {
     let randomStartIndex = Math.floor(Math.random() * width * width);

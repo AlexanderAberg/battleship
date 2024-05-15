@@ -148,8 +148,8 @@ Favicon from  <a href="https://www.freepik.com/icon/herbal-tea_10812632#fromView
 ### Content 
 
 - Information is taken from tea pages and Wikipedia during the years.
-- All html and css was taken from the Code Institute education, big part from Love Running, Coders Coffeehouse and their Tutors
-- The icons in the footer and the menu-bar were taken from [Font Awesome](https://fontawesome.com/)
+- Html and css was taken from the Code Institute education, big part from Love Running, Coders Coffeehouse and their Tutors, some parts related to the grid was taken from W3schools 3 part gridsection at this page https://www.w3schools.com/css/css_grid.asp and the following 2 pages.
+- 
 
 ### Media
 

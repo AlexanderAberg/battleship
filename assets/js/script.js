@@ -1,16 +1,18 @@
 //Game should not start until the DOM is finished loading
-document.addEventListener('DOMContentLoaded');
+document.addEventListener('DOMContentLoaded', function () {});
 
-let buttons = document.getElementsByTagName('button');
+let squares = document.getElementsByClassName('square');
+console.log(squares);
 
-for (let button of buttons) {
-    button.addEventListener('click', function () {
-        if (this.getAttribute('data-type') === 'submit') {
-            alert('You clicked Submit!');
-        } else {
-            let fameType = this.getAttribute('data-type');
-            runGame();
-        }
+for (let square of squares) {
+    square.addEventListener('click', function () {
+        square.style.backgroundColor = 'red';
+        //   if (this.getAttribute('data-type') === 'submit') {
+        //    alert('You clicked Submit!');
+        //   } else {
+        //       let gameType = this.getAttribute('data-type');
+        //       runGame();
+        //   }
     })
 }
 

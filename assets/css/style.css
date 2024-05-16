@@ -25,6 +25,13 @@ body {
     justify-content: space-evenly;
 }
 
+#start {
+    background-color: rgb(197, 202, 201);
+    color: darkmagenta;
+    border-color: rgb(202, 206, 205);
+    box-shadow: 0px;
+}
+
 /* Game board 1 related items */
 .game-board {
     box-sizing: border-box;

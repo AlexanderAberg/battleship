@@ -1,16 +1,16 @@
 # Battleship
 
-Different Coloured Tea is a website to spread awareness to tea drinkers that only had black tea or black and green tea.
-The visitor will find out that there is other tea than black and green tea also red (rooibos), white, yellow, blue and purple tea, I will also mention Oolong tea that is often a bit grayish brown with a hint of yellow often called in between black and green, the site does not plan to mention for example the huge quantity of tea from each colour or herbal tea, it will also include pictures of the different colours.
+Battleship is a game based on the board game.
+In the board game you have two boards with 10x10 squares and you will try to hit the enemies 5 different ships before they hit yours, but this game will not be on that level yet.
 
 <img src="assets/images/amiresponsive.png" alt="Responsive Screens">
 
 # UX
 ### Visitor Goals
 The expected visitor is:
-- Visitors that like tea and want to broaden their horizon.
-- Visitors that are curious what is out there in the world of tea.
-- Visitors that wants to know more and therefore will contact us.
+- Visitors that likes the Battleship and want to play it online.
+- Visitors that want to try different classic board games.
+- Visitors that wants to play this game in particular no matter if they played it before or not.
 
 Visitors goals are:
 - See pictures and information about colourful tea and get inspired.

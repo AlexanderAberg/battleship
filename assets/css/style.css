@@ -125,13 +125,13 @@ h2 {
 }
 
 #battleship {
-    height: 96px;
-    width: 24px;
+    height: 24px;
+    width: 96px;
     background-color: #5f5c5c;
 }
 
 #carrier {
-    height: 120px;
-    width: 24px;
+    height: 24px;
+    width: 120px;
     background-color: rgba(118, 3, 118, 0.957);
 }

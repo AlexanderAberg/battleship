@@ -24,7 +24,7 @@ let ships = [carrier, battleship, cruiser, submarine, destroyer];
 
 //Computer ships placement
 const width = 10;
-shipLocation(destroyer);
+shipLocation();
 shipLocation();
 shipLocation();
 shipLocation();

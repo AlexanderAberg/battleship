@@ -45,17 +45,17 @@ function shipLocation() {
         shipLocation()
     }
 }
-
 //Hit or miss a ship
-function didHit() {
-    let isShip = userFire === userHit[0];
-
-    if (hit) {
-        alert('You hit an enemy ship');
-    } else {
-        alert('You missed');
-    }
-}
+//*Commenting out
+//function didHit() { 
+//  let isShip = userFire === userHit[0];
+//
+//  if (hit) {
+//    alert('You hit an enemy ship');
+// } else {
+//   alert('You missed');
+//  }
+//}
 
 //Get the current victories from the DOM and increase it with 1
 function incrementVictory() {

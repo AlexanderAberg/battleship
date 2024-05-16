@@ -95,5 +95,7 @@ function checkShip(ship, shipLength) {
 if (playerSunkShips.length === 5) {
     infoDisplay.textContent = 'You sunk all the enemies ships.'
     gameOver = true
+} else {
+    gameOver = false
 }
 console.log('playerSunkShips', playerSunkShips);

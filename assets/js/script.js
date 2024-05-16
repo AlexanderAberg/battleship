@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {});
 
 const start = document.querySelector('#start')
 console.log('start', start);
-
+start.addEventListener('click', start);
 let squares = document.getElementsByClassName('square');
 
 for (let square of squares) {
@@ -85,4 +85,15 @@ function handleClick(e) {
     }
 }
 
-start.addEventListener('click', start)
+function checkShip(ship, shipLength) {
+    if (user === 'player') {
+        infoDisplay.textContent = `You sunk the enemies ship ${ship}`
+        playerHits = userHits.filter(ship => ship !== ship)
+    }
+}
+
+if (playerSunkShips.length === 5) {
+    infoDisplay.textContent = 'You sunk all the enemies ships.'
+    gameOver = true
+}
+console.log('playerSunkShips', playerSunkShips);

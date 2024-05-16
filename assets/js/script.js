@@ -1,6 +1,8 @@
 //Game should not start until the DOM is finished loading
 document.addEventListener('DOMContentLoaded', function () {});
-const start = document.querySelector('start')
+
+const start = document.querySelector('#start')
+console.log('start', start);
 
 let squares = document.getElementsByClassName('square');
 
@@ -36,7 +38,6 @@ function shipLocation() {
     let randomStartIndex = Math.floor(Math.random() * width * width);
 
     if (!squares[randomStartIndex].classList.contains('ships')) {
-
 
         squares[randomStartIndex].classList.add('ships');
         squares[randomStartIndex].style.backgroundColor = 'green';

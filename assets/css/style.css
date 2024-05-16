@@ -108,30 +108,30 @@ h2 {
 /* Ships information */
 #destroyer {
     height: 24px;
-    width: 24px;
+    width: 48px;
     background-color: black;
 }
 
 #submarine {
     height: 24px;
-    width: 24px;
+    width: 72px;
     background-color: rgb(0, 255, 195);
 }
 
 #cruiser {
     height: 24px;
-    width: 24px;
+    width: 72px;
     background-color: rgb(5, 128, 5);
 }
 
 #battleship {
-    height: 24px;
+    height: 96px;
     width: 24px;
     background-color: #5f5c5c;
 }
 
 #carrier {
-    height: 24px;
+    height: 120px;
     width: 24px;
     background-color: rgba(118, 3, 118, 0.957);
 }

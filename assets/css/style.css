@@ -11,6 +11,8 @@ body {
 #logo {
     font-size: 4.7em;
     font-family: "Jacquard 12", system-ui;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /* Container for victories and defeats */
@@ -72,7 +74,9 @@ body {
 
 /* Heading for ships board container */
 h2 {
-    padding-left: 30%;
+    display: flex;
+    justify-content: space-evenly;
+
 }
 
 /* Container board about ships left */

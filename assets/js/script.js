@@ -1,5 +1,6 @@
 //Game should not start until the DOM is finished loading
 document.addEventListener('DOMContentLoaded', function () {});
+const start = document.querySelector('start')
 
 let squares = document.getElementsByClassName('square');
 
@@ -48,8 +49,8 @@ function shipLocation() {
 function didHit() {
     let isShip = userFire === userHit[0];
 
-    if (isShip) {
-        alert('You hit a ship');
+    if (hit) {
+        alert('You hit an enemy ship');
     } else {
         alert('You missed');
     }
@@ -66,3 +67,21 @@ function incrementDefeat() {
     let oldDefeat = parseInt(document.getElementById('defeat').innertext);
     document.getElementById('defeat').innerText = ++oldScore;
 }
+//When game is over
+let gameOver = false
+
+//Starting the game
+function StartGame() {
+
+}
+
+function handleClick(e) {
+    if (!gameOver) {
+        if (e.target.classList.contains('ships')) {
+            e.target.classList.add('hit')
+            infoDisplay.textContent = 'You hit an enemy ship'
+        }
+    }
+}
+
+start.addEventListener('click', start)

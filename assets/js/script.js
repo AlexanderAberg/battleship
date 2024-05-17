@@ -46,7 +46,7 @@ function shipLocation() {
 
             chosenSquare.classList.add('ships');
             //   chosenSquare.style.backgroundColor = 'green';
-            shipLocations.push(chosenSquare.innerText)
+            shipLocations.push(chosenSquare.innerText);
         }
     }
 }
@@ -67,7 +67,7 @@ const checkGameState = () => {
     } else {
         gameOver = false;
     }
-}
+};
 
 
 //Get the current victories from the DOM and increase it with 1

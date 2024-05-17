@@ -148,14 +148,14 @@ Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=
 - Wireframe - From Balsamiq 
 - Favicons - Icon from freepik and converted with Favicon.io
 - Mockup - Generated at amiresponsive 
-- Colours I mostly tested what fit together and got help from Lighthouse in Google dev tools to see if I should adjust further 
+- Colours I wanted to have colours that fit the old military style and therefore is pretty boring 
 - Google Devtools to check responsiveness and to check Lighthouse for Accessibility
 - GitHub for storing the project and deploying it
 - Gitpod for project development
 
 ### Colours & Text
 
-- The colours are choosen to be clear so it is easy to see and bland to fit the military setting of the game, while the board is blue because the ocean is blue.
+- The colours are chosen to be clear so it is easy to see and bland to fit the military setting of the game, while the board is blue because the ocean is blue.
 - The text is supposed to be easy to understand and decently plain to also fit with the mi,itary setting of the game.
 - I used a font that I think fit for a historic background which the game has both from being from around WWI and that the warfare is very before GPS, radars and satelites.
 

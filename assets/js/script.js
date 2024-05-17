@@ -10,7 +10,7 @@ let squares = document.getElementsByClassName('square');
 let gameOver = false
 
 // The ships
-let ships = [carrier, battleship, cruiser, submarine, destroyer];
+// let ships = [carrier, battleship, cruiser, submarine, destroyer];
 
 let shipsSunk = 0;
 
@@ -45,7 +45,7 @@ function shipLocation() {
         if (!chosenSquare.classList.contains('ships')) {
 
             chosenSquare.classList.add('ships');
-            chosenSquare.style.backgroundColor = 'green';
+            //   chosenSquare.style.backgroundColor = 'green';
             shipLocations.push(chosenSquare.innerText)
         }
     }

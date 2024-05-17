@@ -33,6 +33,7 @@ h2 {
     max-height: 100px;
     display: flex;
     justify-content: space-evenly;
+    display: none;
 }
 
 #start {

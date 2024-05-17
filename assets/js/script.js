@@ -53,28 +53,13 @@ function shipLocation() {
 
 //Computer ships placement
 shipLocation();
+
 //Hit or miss
-//function didHit(square) {
-// let index = Array.from(squares).indexOf(square);
-//  shipStatus[index] = 'hit';
+function didHit(square) {
+    let index = Array.from(squares).indexOf(square);
+    shipStatus[index] = 'hit';
+}
 
-//Is the ship sunk?
-//  if (shipStatus.filter(status => status === 'hit')) length === ships[index].shipsSunk++;
-// console.log(`Ship ${index} sunk`);
-//}
-
-//Is all ships sunk=
-//if (shipsStatus.every(status => status === 'hit')) {
-//  gameOver = true;
-//  infoDisplay.textContent = 'You sank all enemy ships';
-//}
-
-//if (playerShipsleft == 0)
-// if (true = gameOver) {
-
-// } else {
-//      playerShipsleft -= 1
-//  }
 
 const checkGameState = () => {
     if (shipsSunk === 5) {

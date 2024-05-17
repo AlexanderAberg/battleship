@@ -70,13 +70,6 @@ const checkGameState = () => {
 }
 
 
-// if (hit) {
-//  alert('You hit an enemy ship');
-// } else {
-// alert('You missed');
-
-
-
 //Get the current victories from the DOM and increase it with 1
 function incrementVictory() {
     let oldVictory = parseInt(document.getElementById('victory').innertext);
@@ -110,10 +103,4 @@ function checkShip(ship, shipLength) {
     }
 }
 
-// if (playerSunkShips.shipLength === 5) {
-//     infoDisplay.textContent = 'You sunk all the enemies ships.'
-//     gameOver = true
-// } else {
-//     gameOver = false
-// }
 console.log('playerSunkShips', playerSunkShips);

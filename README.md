@@ -44,7 +44,7 @@ The Business Goals are:
 <img src="assets/images/phone-image.png" alt='Looks on phone'>
 
 - __Board__
-  - You can see a 10x10 board that you can play on.
+  - You can see a 10x10 board that you can play on, it will be coloured red if you hit a ship and black if you miss.
   <img src="assets/images/phone-image.png" alt='board with 2 squares attacked, one of them with a ship'>
 
 
@@ -56,11 +56,11 @@ The Business Goals are:
 - In the future you will have normal sized ships instead of the current 1 square ships.
 - In the future there will be a victory board where you an see wins and defeats plus have a start button so you don't need to refresh the page to restart the game.
 - Will be a ships board where you can see ships to place and also where you will be able to se sunken ships for both you and the enemy.
+- In the future shouldn't be possible to continue shooting when all 5 ships are destroyed.
 
 ## Testing 
 
-I have tested all links and buttons including navbar and they all work, the form also work and requires an email in email field, one of the radio buttons and the name fields filled in, but checkbox is optional.
-I have tested on Chrome, Firefox and Edge without a problem, checked on many different sized from about 280p to 2000 px wide and 400px to about 2000 px high and didn't find any problems with the responsiveness.
+- You can play the game in Chrome, Firefox, Edge and on iPhone in the same way without any other errors.
 
 
 ### Validator Testing 

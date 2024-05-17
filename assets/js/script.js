@@ -71,16 +71,16 @@ const checkGameState = () => {
 
 
 //Get the current victories from the DOM and increase it with 1
-function incrementVictory() {
-    let oldVictory = parseInt(document.getElementById('victory').innertext);
-    document.getElementById('victory').innerText = ++oldScore;
-}
+// function incrementVictory() {
+//   let oldVictory = parseInt(document.getElementById('victory').innertext);
+//   document.getElementById('victory').innerText = ++oldScore;
+// }
 
 //Get the current defeats from the DOM and increase it with 1
-function incrementDefeat() {
-    let oldDefeat = parseInt(document.getElementById('defeat').innertext);
-    document.getElementById('defeat').innerText = ++oldScore;
-}
+// function incrementDefeat() {
+// let oldDefeat = parseInt(document.getElementById('defeat').innertext);
+//  document.getElementById('defeat').innerText = ++oldScore;
+// }
 
 //Starting the game
 function StartGame() {

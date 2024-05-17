@@ -70,20 +70,19 @@ The Business Goals are:
 - CSS
   - No errors but 1 warning were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falexanderaberg.github.io%2Fbattleship%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv) it got validated as CSS Stage 3 +SVG, the warning I ignore because I want the color and background-color to be the same, because I don't want the text to be seen before clicking a square!
 - JS
+  - No errors was returned for JS, but 16 warnings, 8 undefined cariables and 3 unused variables when passing through the official [(Jigsaw) validator](https://jshint.com/) I will need to work on them in the future.
 
 
-<img src="assets/images/validator-index.html.png" alt='Validator html'>
-<img src="assets/images/validator-css.html.png" alt='Validator css'>
-<img src="assets/images/validator-contact-us.html.png" alt='Validator Contact Us.html'>
+<img src="assets/images/validator-html.png" alt='Validator html'>
+<img src="assets/images/validator-css.png" alt='Validator css'>
+<img src="assets/images/validator-js.png" alt='Validator js'>
 
 ### Unfixed and fixed Bugs
 
-- Solved all known bugs, except for the blue background behind the submit button in the form on the Contact Us page on phones (tested on iPhone 13 Pro), it looks correct in Google Dev Tools.
-- I Had some issues with fixing the header and did it with the help of a tutor same thing with photos on larger screens which you can see in the css.
-- I did much trial and error with forms, pictures, header and footer and went through many colours on About Tea until my mentor suggested that I use the tea colour as background which made it possible to have text and background fit together better, I also did choose black as background for menu bar and contact form, the contact form I still wanted to see the background through which I sorted with the help of opacity.
-- I also got some help from my slack team for the header.
-
-- I would say that the header is by far what I had biggest problems with and the responsivness on larger screens for images on home.
+- Have some unresolved code in JS and some commented out code in all three languages.
+- With the help of the validator did I notice some small issues in the js that I fixed.
+- The page is working, but because of unsolved issues I haven't been able to implement more.
+- I got help with some bugs by mentor, slack and tutor.
 
 ### Quality Score through Google Devtools Lighthouse
 
@@ -112,9 +111,11 @@ Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=
 
 - Boards are created with the help of tutorial from W3schools, https://www.w3schools.com/css/css_grid.asp https://www.w3schools.com/css/css_grid_container.asp and https://www.w3schools.com/css/css_grid_item.asp.
 - The Tutor Roman helped me with the grid, it is mainly my own code but with his help.
-- Got help from Alex C on our Slack Team Group with the ships.
+- Got help from Alex C on our Slack Team Group with the ships and also got some other suggestions on slack.
+- My mentor Rory Patrick has been much help with suggestion and ideas.
 - Template for this README is taken from my previous project Different Coloured Tea that in term got its template from Love Running and my mentors P1.
 - Got inspired and used/reused some code from https://codepen.io/patrycja-b/pen/EWRywX and https://www.youtube.com/watch?v=Ubh_k18sX4E&ab_channel=CodewithAniaKub%C3%B3w 
+- Got some inspiration from perplexity AI but the AI couldn't really help me with solving my issues and the swedish slack team also gave me similiar suggestions for the handleClick function but neither did help me sort that out.
 
 
 ### Content 

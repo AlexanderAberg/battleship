@@ -3,7 +3,7 @@
 Battleship is a game based on the board game.
 In the board game you have two boards with 10x10 squares and you will try to hit the enemies 5 different ships before they hit yours, but this game will not be on that level yet.
 
-<img src="assets/images/amiresponsive.png" alt="Responsive Screens">
+<img src="assets/images/amiresponsive.png" alt='Responsive Screens'>
 
 # UX
 ### Visitor Goals
@@ -41,10 +41,11 @@ The Business Goals are:
 - __Page__
   - There is only one page with everything in it to make it simple for the user.
 
-<img src="assets/images/header.png" alt="Header">
+<img src="assets/images/phone-image.png" alt='Looks on phone'>
 
 - __Board__
   - You can see a 10x10 board that you can play on.
+  <img src="assets/images/phone-image.png" alt='board with 2 squares attacked, one of them with a ship'>
 
 
 
@@ -69,10 +70,10 @@ I have tested on Chrome, Firefox and Edge without a problem, checked on many dif
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falexanderaberg.github.io%2FDifferent-Coloured-Tea%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv) it got validated as CSS Stage 3 +SVG!
 
-<img src="assets/images/validator-index.html.png" alt="Validator Index.html">
-<img src="assets/images/validator-about-tea.html.png" alt="Validator About Tea.html">
-<img src="assets/images/validator-contact-us.html.png" alt="Validator Contact Us.html">
-<img src="assets/images/validator-style.css.png" alt="Validator Style.css.html">
+<img src="assets/images/validator-index.html.png" alt='Validator Index.html'>
+<img src="assets/images/validator-about-tea.html.png" alt='Validator About Tea.html'>
+<img src="assets/images/validator-contact-us.html.png" alt='Validator Contact Us.html'>
+<img src="assets/images/validator-style.css.png" alt='Validator Style.css.html'>
 
 ### Unfixed and fixed Bugs
 
@@ -87,12 +88,8 @@ I have tested on Chrome, Firefox and Edge without a problem, checked on many dif
 
 - Lighthouse testing on Chrome Incognito to prevent cookies and background cache to slow down.
 
-<img src="assets/images/lighthouse-index-phone.png" alt="Lighthouse Index Phone">
-<img src="assets/images/lighthouse-index-computer.png" alt="Lighthouse Index Computer">
-<img src="assets/images/lighthouse-abouttea-phone.png" alt="Lighthouse About Tea Phone">
-<img src="assets/images/lighthouse-abouttea-computer.png" alt="Lighthouse About Tea Computer">
-<img src="assets/images/lighthouse-contactus-phone.png" alt="Lighthouse Contact Us Phone">
-<img src="assets/images/lighthouse-contactus-computer.png" alt="Lighthouse Contact Us Computer">
+<img src="assets/images/lighthouse-phone.png" alt='Lighthouse  Phone'>
+<img src="assets/images/lighthouse-desktop.png" alt='Lighthouse  Computer'>
 
 
 ## Deployment
@@ -110,7 +107,7 @@ I have tested on Chrome, Firefox and Edge without a problem, checked on many dif
 
 ## Credits 
 
-Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=search&page=1&position=24&uuid=1fab3cff-7977-4766-8a3e-e89762b82c90">Icon by Umeicon</a> and generated through https://favicon.io/favicon-converter/ 
+Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=search&page=1&position=24&uuid=1fab3cff-7977-4766-8a3e-e89762b82c90">'Icon by Umeicon'</a> and generated through https://favicon.io/favicon-converter/ 
 
 - Boards are created with the help of tutorial from W3schools, https://www.w3schools.com/css/css_grid.asp https://www.w3schools.com/css/css_grid_container.asp and https://www.w3schools.com/css/css_grid_item.asp.
 - The Tutor Roman helped me with the grid, it is mainly my own code but with his help.
@@ -128,15 +125,15 @@ Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=
 ### Media
 
 - Favicon is from https://www.freepik.com/icon/battleship_7445202#fromView=search&page=1&position=24&uuid=1fab3cff-7977-4766-8a3e-e89762b82c90 and converted from https://favicon.io/favicon-converter/ 
-- Responsive mockup from https://ui.dev/amiresponsive?url=https://alexanderaberg.github.io/Different-Coloured-Tea/ 
+- Responsive mockup from https://ui.dev/amiresponsive?url=https://alexanderaberg.github.io/battleship/ 
 
 ### Wireframe
 
 - Used Balsamiq for Wireframe, the Wireframe has some content that is missing in the project because of lack of time, see also Features Left to Implement in this README, also the wireframe is not to scale especially computer.
 
-<img src="assets/images/wireframe-phone.png" alt="Wireframe for Phone">
-<img src="assets/images/wireframe-tablet.png" alt="Wireframe for Tablet">
-<img src="assets/images/wireframe-computer.png" alt="Wireframe for Computer">
+<img src="assets/images/wireframe-phone.png" alt='Wireframe for Phone'>
+<img src="assets/images/wireframe-tablet.png" alt='Wireframe for Tablet'>
+<img src="assets/images/wireframe-computer.png" alt='Wireframe for Computer'>
 
 ### Technologies Used
 
@@ -159,5 +156,4 @@ Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=
 - The text is supposed to be easy to understand and decently plain to also fit with the mi,itary setting of the game.
 - I used a font that I think fit for a historic background which the game has both from being from around WWI and that the warfare is very before GPS, radars and satelites.
 
-<img src="assets/images/colours.png" alt="Pastel Colours">
-<img src="assets/images/colours.png" alt="Pastel Colours">
+<img src="assets/images/battleship-palette.png" alt="Colour palette">

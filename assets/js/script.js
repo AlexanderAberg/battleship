@@ -6,11 +6,25 @@ console.log('start', start);
 start.addEventListener('click', StartGame);
 let squares = document.getElementsByClassName('square');
 
+//When game is over
+let gameOver = false
+
+// The ships
+let ships = [carrier, battleship, cruiser, submarine, destroyer];
+
+let shipsSunk = 0;
+
+const width = 10;
+
+let shipLocations = [];
+console.log()
+
 for (let square of squares) {
     square.addEventListener('click', function () {
         if (square.classList.contains('ships')) {
             square.style.backgroundColor = 'red';
-            didHit(square);
+            if (shipLocations.includes(square.innerText))
+                console.log('hit');
         } else {
             square.style.backgroundColor = 'black';
         }
@@ -22,33 +36,23 @@ for (let square of squares) {
         //   }
     })
 }
-// The ships
-let ships = [carrier, battleship, cruiser, submarine, destroyer];
-
-//Computer ships placement
-const width = 10;
-shipLocation();
-shipLocation();
-shipLocation();
-shipLocation();
-shipLocation();
 
 //Placement of computer ships
 function shipLocation() {
-    const shipLocation = [];
-    let randomStartIndex = Math.floor(Math.random() * width * width);
+    for (i = 0; i < 5; i++) {
+        let randomStartIndex = Math.floor(Math.random() * width * width);
+        let chosenSquare = squares[randomStartIndex]
+        if (!chosenSquare.classList.contains('ships')) {
 
-    if (!squares[randomStartIndex].classList.contains('ships')) {
-
-        squares[randomStartIndex].classList.add('ships');
-        squares[randomStartIndex].style.backgroundColor = 'green';
-    } else {
-        shipLocation()
+            chosenSquare.classList.add('ships');
+            chosenSquare.style.backgroundColor = 'green';
+            shipLocations.push(chosenSquare.innerText)
+        }
     }
 }
 
-let shipsSunk = 0;
-
+//Computer ships placement
+shipLocation();
 //Hit or miss
 //function didHit(square) {
 // let index = Array.from(squares).indexOf(square);
@@ -72,13 +76,13 @@ let shipsSunk = 0;
 //      playerShipsleft -= 1
 //  }
 
-//const checkGameState = (shipCount) => {
-// if (shipCount === 0) {
-//    if (squares = style.backgroundColor === 'red', gameOver = true)
-// } else {
-//       gameOver = false
-//  }
-//}
+const checkGameState = () => {
+    if (shipsSunk === 5) {
+        gameOver = true
+    } else {
+        gameOver = false
+    }
+}
 
 
 // if (hit) {
@@ -99,8 +103,6 @@ function incrementDefeat() {
     let oldDefeat = parseInt(document.getElementById('defeat').innertext);
     document.getElementById('defeat').innerText = ++oldScore;
 }
-//When game is over
-let gameOver = false
 
 //Starting the game
 function StartGame() {
@@ -123,10 +125,10 @@ function checkShip(ship, shipLength) {
     }
 }
 
-if (playerSunkShips.shipLength === 5) {
-    infoDisplay.textContent = 'You sunk all the enemies ships.'
-    gameOver = true
-} else {
-    gameOver = false
-}
+// if (playerSunkShips.shipLength === 5) {
+//     infoDisplay.textContent = 'You sunk all the enemies ships.'
+//     gameOver = true
+// } else {
+//     gameOver = false
+// }
 console.log('playerSunkShips', playerSunkShips);

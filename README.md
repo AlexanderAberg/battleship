@@ -17,71 +17,44 @@ Visitors goals are:
 - To see what exists in the world of tea.
 - Contact the people behind the website.
 
-How Different Coloured Tea fills the needs:
-- You can see the coloured tea on the pictures right at the landing page and also on the Contact Form.
-- About Tea has some short information about the different coloured tea.
-- The Contact Us page makes it possible to contact us.
-- Easy to reach everything form the header and you can find our social media in the footer, you also see the footer all the time.
+How Battleship fills the needs:
+- You can play the game on the website.
+- You can read the instructions on the page if you are new to the game.
+- You will in the future be able to follow scores and how many ships left.
+- Even if the game is simplified will the real experience come later.
 
 
 ### Business Goals
 The Business Goals are:
-- Spread awareness of the more uncommon tea colours.
+- To make a well known game.
 - Get in touch with other tea drinkers that are not satisfied with your normal tea.
 - If enough people will be aware the bigger chance that you will find the more rare tea in your city.
 
 ### User Stories
-1. As a curious tea drinker I expect to find out about different kind of tea.
-0. I expect to get in touch with other people with my interest in more rare tea colours.
-0. I expect to be able to have a reference so I can spread awareness myself
+1. As a board game player I want to be able to play them online.
+0. I expect to have a functioning game with feedback.
+0. If I don't know the game I expect to find out how to play.
 
 
 ### Existing Features
 
-- __Header__
-  - Header has a menu with a nav bar or text on bigger screens and the website name in h1.
+- __Page__
+  - There is only one page with everything in it to make it simple for the user.
 
 <img src="assets/images/header.png" alt="Header">
 
-- __Navigation Bar__
+- __Board__
+  - You can see a 10x10 board that you can play on.
 
-  - The navigation bar can be found on all 3 pages and is fully responsive, it will turn between a bar or buttons depending on the size of the screen.
-  - The bar will be visible even if you scroll down. 
-
-<img src="assets/images/navbar.png" alt="Nav bar">
-
-- __The landing page images__
-
-  - The landing page or "Home" has 8 different coloured tea on it, with 1-2 pictures in a row depending on screen size and it is fully responsive in image size also. 
-  - This page will make the visitor see all kind of colours on tea that they might not know that it existed.
-
-<img src="assets/images/landingpage.png" alt="Landing Page">
-
-- __About Tea__
-
-  - About Tea page will give a short description of the different coloured tea. 
-  - I have put different coloured background behind every div related to a specific tea colour, it should be the same main colour as the tea but with a more friendly palette. 
-
-<img src="assets/images/abouttea.png" alt="About Tea">
-
-- __Contact Us__
-
-  - The Contact Us page has a contact form and a background picture that is fully responsive. 
-  - The form has a background with an opacity to make it see through while still making the text easy to read. 
-
-<img src="assets/images/contactus.png" alt="Contact Us">
-
-- __The Footer__ 
-
-  - The footer can always be seen and has logos with links to Facebook, YouTube, Instagram and X. 
-  - The footer is both responsive and all the links works.
-
-<img src="assets/images/footer.png" alt="Footer">
 
 
 ### Features Left to Implement
 
-- I wanted to make an event information, also to get links from every picture on Home to the correct line in About Tea, make buttons change colour when marked, creating a couple of icons and maybe something more that I haven't thought about.
+- There is many features that is currently commented out because they are not done yet.
+- You will in the future be able to have a second board where you can place your own ships that the enemy will attack.
+- In the future you will have normal sized ships instead of the current 1 square ships.
+- In the future there will be a victory board where you an see wins and defeats plus have a start button so you don't need to refresh the page to restart the game.
+- Will be a ships board where you can see ships to place and also where you will be able to se sunken ships for both you and the enemy.
 
 ## Testing 
 
@@ -132,7 +105,7 @@ I have tested on Chrome, Firefox and Edge without a problem, checked on many dif
   - In GitHub you can open every seperate file including html. css. images and even favicons and see the folder structure.
   - It is possible to check the commit history in github-pages under Deployment to the right
 
-  - Link to the live version of the project can be found here: - https://github.com/AlexanderAberg/Different-Coloured-Tea.git
+  - Link to the live version of the project can be found here: - https://alexanderaberg.github.io/battleship/ and to the gitHub page here : https://github.com/AlexanderAberg/battleship
 
 
 ## Credits 
@@ -143,13 +116,14 @@ Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=
 - The Tutor Roman helped me with the grid, it is mainly my own code but with his help.
 - Got help from Alex C on our Slack Team Group with the ships.
 - Template for this README is taken from my previous project Different Coloured Tea that in term got its template from Love Running and my mentors P1.
+- Got inspired and used/reused some code from https://codepen.io/patrycja-b/pen/EWRywX and https://www.youtube.com/watch?v=Ubh_k18sX4E&ab_channel=CodewithAniaKub%C3%B3w 
 
 
 ### Content 
 
-- Information is taken from tea pages and Wikipedia during the years.
+- I know since before how you are supposed to play the game, so the information and thought behind it is from how I used to play it as a child.
 - Html and css was taken from the Code Institute education, big part from Love Running, Coders Coffeehouse and their Tutors, some parts related to the grid was taken from W3schools 3 part gridsection at this page https://www.w3schools.com/css/css_grid.asp and the following 2 pages.
-- 
+- JavaScript was taken from the Code Institute education and the project Love Maths, but also used/got inspired by code from https://codepen.io/patrycja-b/pen/EWRywX and https://www.youtube.com/watch?v=Ubh_k18sX4E&ab_channel=CodewithAniaKub%C3%B3w 
 
 ### Media
 
@@ -158,7 +132,7 @@ Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=
 
 ### Wireframe
 
-- Used Balsamiq for Wireframe, the Wireframe has some content that is missing in the project because of lack of time, see also Features Left to Implement in this README, the pictures became also better than expected so therefore will wireframe for home have more images on row and different setup than the actual project also the wireframe is not to scale especially computer.
+- Used Balsamiq for Wireframe, the Wireframe has some content that is missing in the project because of lack of time, see also Features Left to Implement in this README, also the wireframe is not to scale especially computer.
 
 <img src="assets/images/wireframe-phone.png" alt="Wireframe for Phone">
 <img src="assets/images/wireframe-tablet.png" alt="Wireframe for Tablet">

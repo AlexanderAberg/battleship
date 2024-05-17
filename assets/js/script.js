@@ -92,6 +92,11 @@ function handleClick(e) {
         if (e.target.classList.contains('ships')) {
             e.target.classList.add('hit')
             infoDisplay.textContent = 'You hit an enemy ship'
+            if (isShipSunk(e.target)) {
+                shipsSunk++;
+                checkGameState(shipsSunk === 5);
+                gameOver = true;
+            }
         }
     }
 }

@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {});
 
 const start = document.querySelector('#start')
 console.log('start', start);
-start.addEventListener('click', start);
+start.addEventListener('click', StartGame);
 let squares = document.getElementsByClassName('square');
 
 for (let square of squares) {
     square.addEventListener('click', function () {
         if (square.classList.contains('ships')) {
             square.style.backgroundColor = 'red';
-            didHit();
+            didHit(square);
         } else {
             square.style.backgroundColor = 'black';
         }
@@ -45,17 +45,39 @@ function shipLocation() {
         shipLocation()
     }
 }
-//Hit or miss a ship
-//*Commenting out
-//function didHit() { 
-//  let isShip = userFire === userHit[0];
-//
-//  if (hit) {
-//    alert('You hit an enemy ship');
+
+let shipsSunk = 0;
+
+//Hit or miss
+function didHit(square) {
+    let index = Array.from(squares).indexOf(square);
+    shipStatus[index] = 'hit';
+
+    //Is the ship sunk?
+    if (shipStatus.filter(status => status === 'hit')) length === ships[index].shipsSunk++;
+    console.log(`Ship ${index} sunk`);
+}
+
+//Is all ships sunk=
+if (shipsStatus.every(status => status === 'hit')) {
+    gameOver = true;
+    infoDisplay.textContent = 'You sank all enemy ships';
+}
+
+if (playerShipsleft == 0)
+    if (true = gameOver) {
+
+    } else {
+        playerShipsleft -= 1
+    }
+
+
+// if (hit) {
+//  alert('You hit an enemy ship');
 // } else {
-//   alert('You missed');
-//  }
-//}
+// alert('You missed');
+
+
 
 //Get the current victories from the DOM and increase it with 1
 function incrementVictory() {
@@ -92,7 +114,7 @@ function checkShip(ship, shipLength) {
     }
 }
 
-if (playerSunkShips.length === 5) {
+if (playerSunkShips.shipLength === 5) {
     infoDisplay.textContent = 'You sunk all the enemies ships.'
     gameOver = true
 } else {

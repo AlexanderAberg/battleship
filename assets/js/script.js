@@ -120,7 +120,7 @@ function handleClick(e) {
 
 function checkShip(ship, shipLength) {
     if (user === 'player') {
-        infoDisplay.textContent = `You sunk the enemies ship ${ship}`
+        infoDisplay.textContent = `You sank the enemies ship ${ship}`
         playerHits = userHits.filter(ship => ship !== ship)
     }
 }

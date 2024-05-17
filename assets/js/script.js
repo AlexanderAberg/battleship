@@ -1,13 +1,13 @@
 //Game should not start until the DOM is finished loading
 document.addEventListener('DOMContentLoaded', function () {});
 
-const start = document.querySelector('#start')
+const start = document.querySelector('#start');
 console.log('start', start);
 start.addEventListener('click', StartGame);
 let squares = document.getElementsByClassName('square');
 
 //When game is over
-let gameOver = false
+let gameOver = false;
 
 // The ships
 // let ships = [carrier, battleship, cruiser, submarine, destroyer];
@@ -17,14 +17,14 @@ let shipsSunk = 0;
 const width = 10;
 
 let shipLocations = [];
-console.log()
+console.log();
 
 for (let square of squares) {
     square.addEventListener('click', function () {
         if (square.classList.contains('ships')) {
             square.style.backgroundColor = 'red';
-            if (shipLocations.includes(square.innerText))
-                console.log('hit');
+            if (shipLocations.includes(square.innerText));
+            console.log('hit');
         } else {
             square.style.backgroundColor = 'black';
         }
@@ -41,7 +41,7 @@ for (let square of squares) {
 function shipLocation() {
     for (i = 0; i < 5; i++) {
         let randomStartIndex = Math.floor(Math.random() * width * width);
-        let chosenSquare = squares[randomStartIndex]
+        let chosenSquare = squares[randomStartIndex];
         if (!chosenSquare.classList.contains('ships')) {
 
             chosenSquare.classList.add('ships');
@@ -63,9 +63,9 @@ function didHit(square) {
 
 const checkGameState = () => {
     if (shipsSunk === 5) {
-        gameOver = true
+        gameOver = true;
     } else {
-        gameOver = false
+        gameOver = false;
     }
 }
 
@@ -90,8 +90,8 @@ function StartGame() {
 function handleClick(e) {
     if (!gameOver) {
         if (e.target.classList.contains('ships')) {
-            e.target.classList.add('hit')
-            infoDisplay.textContent = 'You hit an enemy ship'
+            e.target.classList.add('hit');
+            infoDisplay.textContent = ('You hit an enemy ship');
             if (isShipSunk(e.target)) {
                 shipsSunk++;
                 checkGameState(shipsSunk === 5);

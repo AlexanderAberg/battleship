@@ -66,14 +66,15 @@ The Business Goals are:
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Falexanderaberg.github.io%2FDifferent-Coloured-Tea%2Findex.html) Also checked About Tea and Contact Us pages without any errors.
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Falexanderaberg.github.io%2Fbattleship%2F#cl177c14).
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falexanderaberg.github.io%2FDifferent-Coloured-Tea%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv) it got validated as CSS Stage 3 +SVG!
+  - No errors but 1 warning were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falexanderaberg.github.io%2Fbattleship%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv) it got validated as CSS Stage 3 +SVG, the warning I ignore because I want the color and background-color to be the same, because I don't want the text to be seen before clicking a square!
+- JS
 
-<img src="assets/images/validator-index.html.png" alt='Validator Index.html'>
-<img src="assets/images/validator-about-tea.html.png" alt='Validator About Tea.html'>
+
+<img src="assets/images/validator-index.html.png" alt='Validator html'>
+<img src="assets/images/validator-css.html.png" alt='Validator css'>
 <img src="assets/images/validator-contact-us.html.png" alt='Validator Contact Us.html'>
-<img src="assets/images/validator-style.css.png" alt='Validator Style.css.html'>
 
 ### Unfixed and fixed Bugs
 

@@ -147,7 +147,7 @@ Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=
 - Wireframe - From Balsamiq 
 - Favicons - Icon from freepik and converted with Favicon.io
 - Mockup - Generated at amiresponsive 
-- Colours I wanted to have colours that fit the old military style and therefore is pretty boring 
+- Colours I wanted to have colours that fit the old military style and therefore is pretty boring, I used Coolors to create my palette but did experiement by myself for my choices 
 - Google Devtools to check responsiveness and to check Lighthouse for Accessibility
 - GitHub for storing the project and deploying it
 - Gitpod for project development

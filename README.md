@@ -45,7 +45,7 @@ The Business Goals are:
 
 - __Board__
   - You can see a 10x10 board that you can play on, it will be coloured red if you hit a ship and black if you miss.
-  <img src="assets/images/phone-image.png" alt='board with 2 squares attacked, one of them with a ship'>
+  <img src="assets/images/board.png" alt='board with 2 squares attacked, one of them with a ship'>
 
 
 

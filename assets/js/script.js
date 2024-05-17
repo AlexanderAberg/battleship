@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {});
 
 const start = document.querySelector('#start')
+console.log('start', start);
 start.addEventListener('click', StartGame);
 let squares = document.getElementsByClassName('square');
 
@@ -16,14 +17,14 @@ let shipsSunk = 0;
 const width = 10;
 
 let shipLocations = [];
-
+console.log()
 
 for (let square of squares) {
     square.addEventListener('click', function () {
         if (square.classList.contains('ships')) {
             square.style.backgroundColor = 'red';
             if (shipLocations.includes(square.innerText))
-
+                console.log('hit');
         } else {
             square.style.backgroundColor = 'black';
         }
@@ -44,7 +45,7 @@ function shipLocation() {
         if (!chosenSquare.classList.contains('ships')) {
 
             chosenSquare.classList.add('ships');
-            //   chosenSquare.style.backgroundColor = 'green'; //Commenting the colour because it shouldn't be seen, but at same time I want it there when it's time to try fix the game
+            chosenSquare.style.backgroundColor = 'green';
             shipLocations.push(chosenSquare.innerText)
         }
     }
@@ -101,3 +102,5 @@ function checkShip(ship, shipLength) {
         playerHits = userHits.filter(ship => ship !== ship);
     }
 }
+
+console.log('playerSunkShips', playerSunkShips);

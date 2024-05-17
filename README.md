@@ -142,10 +142,9 @@ Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=
 
 - HTML - For how the website with the pages is built and planned 
 - CSS - For all the styling
-- Images  - Freepik for Pictures except for purple tea that I got from bluetea mentioned in media
+- JS - For the game to function as a game including its logic
 - Fonts - From Google Fonts
-- Icons - From Fontawesome 
-- Education Tool- From the people at Codeinstitute
+- Education Tool- From the people at Codeinstitute and W3 School
 - Wireframe - From Balsamiq 
 - Favicons - Icon from freepik and converted with Favicon.io
 - Mockup - Generated at amiresponsive 
@@ -156,9 +155,9 @@ Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=
 
 ### Colours & Text
 
-- Did choose dark colours for header, footer, menu etc. to fit with the pictures and wanted the background of the h2 in Home and the form in Contact Us to have opacity so you can see through without covering the images completely.
-- The colour for About Tea is pastel colour to make it friendlier to the eyes compared to sharp colours, the white and black doesn't really exist as pastel so I tried to make them friendlier also which you can see on the colours and in the css picture below.
-- Used Font style that is seperate between the logo, h1 and h2 compared to h3 and text with backup font for browsers without the font, the text colour in general is supposed to fit very well with the background colours that is why the background colour for tea has white text except for black that instead has white text.
+- The colours are choosen to be clear so it is easy to see and bland to fit the military setting of the game, while the board is blue because the ocean is blue.
+- The text is supposed to be easy to understand and decently plain to also fit with the mi,itary setting of the game.
+- I used a font that I think fit for a historic background which the game has both from being from around WWI and that the warfare is very before GPS, radars and satelites.
 
 <img src="assets/images/colours.png" alt="Pastel Colours">
 <img src="assets/images/colours.png" alt="Pastel Colours">

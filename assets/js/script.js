@@ -25,6 +25,9 @@ for (let square of squares) {
             square.style.backgroundColor = 'red';
             if (shipLocations.includes(square.innerText));
             console.log('hit');
+            shipsSunk++
+            checkGameState();
+            console.log(shipsSunk, gameOver)
         } else {
             square.style.backgroundColor = 'black';
         }
@@ -107,5 +110,3 @@ function checkShip(ship, shipLength) {
         playerHits = userHits.filter(ship => ship !== ship);
     }
 }
-
-console.log('playerSunkShips', playerSunkShips);

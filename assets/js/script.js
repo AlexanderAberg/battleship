@@ -1,24 +1,42 @@
-//Game should not start until the DOM is finished loading
-document.addEventListener('DOMContentLoaded', function () {});
+// Game state
+let gameState = {
+    isGameStarted: false,
+    shipsSunk: 0,
+    totalShips: 5,
+    ships: [],
+    gameOver: false,
+    victories: 0,
+    defeats: 0,
+    missCount: 0,
+    maxMisses: 20
+};
 
-const start = document.querySelector('#start');
-console.log('start', start);
-start.addEventListener('click', StartGame);
-let squares = document.getElementsByClassName('square');
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', function () {
+    initializeGame();
+    setupEventListeners();
 
-//When game is over
-let gameOver = false;
+    // Start the first game automatically
+    startGame();
+});
 
-// The ships
-// let ships = [carrier, battleship, cruiser, submarine, destroyer];
+// Initialize games
+function initializeGame() {
+    // Reset game state but keep scores
+    gameState = {
+        isGameStarted: false,
+        shipsSunk: 0,
+        totalShips: 5,
+        ships: [],
+        gameOver: false,
+        victories: gameState.victories || 0,
+        defeats: gameState.defeats || 0,
+        missCount: 0,
+        maxMisses: 20
+    };
 
-let shipsSunk = 0;
-
-const width = 10;
-
-let shipLocations = [];
-console.log();
-
+    // Reset board colors
+    const squares = document.getElementsByClassName('square');
 for (let square of squares) {
     square.addEventListener('click', function () {
         if (square.classList.contains('ships')) {

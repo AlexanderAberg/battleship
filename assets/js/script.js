@@ -38,24 +38,39 @@ function initializeGame() {
     // Reset board colors
     const squares = document.getElementsByClassName('square');
 for (let square of squares) {
-    square.addEventListener('click', function () {
-        if (square.classList.contains('ships')) {
-            square.style.backgroundColor = 'red';
-            if (shipLocations.includes(square.innerText));
-            console.log('hit');
-            shipsSunk++
-            checkGameState();
-            console.log(shipsSunk, gameOver)
-        } else {
-            square.style.backgroundColor = 'black';
-        }
-        //   if (this.getAttribute('data-type') === 'submit') {
-        //    alert('You clicked Submit!');
-        //   } else {
-        //       let gameType = this.getAttribute('data-type');
-        //       runGame();
-        //   }
+    square.style.backgroundColor = 'blue';
+        square.classList.remove('ships', 'hit', 'miss');
+    }
+
+    // Show the victory board
+    document.querySelector('.victory-board').style.display = 'flex';
+
+    // Update score display
+    document.getElementById('victory').textContent = gameState.victories;
+    document.getElementById('defeat').textContent = gameState.defeats;
+}
+
+// Setup event listeners
+function setupEventListeners() {
+    const startButton = document.getElementById('start');
+    startButton.addEventListener('click', function () {
+        initializeGame();
+        startGame();
     });
+    startButton.textContent = 'New Game';
+
+    // Board clicks
+    const squares = document.getElementsByClassName('square');
+    for (let square of squares) {
+        square.addEventListener('click', handleSquareClick);
+    }
+}
+
+// Start the game
+function startGame() {
+    gameState.isGameStarted = true;
+    gameState.ships = placeShips();
+    updateInfoDisplay(`Find all 5 ships! You have ${gameState.maxMisses} attempts.`);
 }
 
 //Placement of computer ships

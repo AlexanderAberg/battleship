@@ -73,16 +73,18 @@ function startGame() {
     updateInfoDisplay(`Find all 5 ships! You have ${gameState.maxMisses} attempts.`);
 }
 
-//Placement of computer ships
-function shipLocation() {
-    for (i = 0; i < 5; i++) {
-        let randomStartIndex = Math.floor(Math.random() * width * width);
-        let chosenSquare = squares[randomStartIndex];
-        if (!chosenSquare.classList.contains('ships')) {
+// Place ships randomly on the board
+function placeShips() {
+    const squares = document.getElementsByClassName('square');
+    const shipPositions = [];
 
-            chosenSquare.classList.add('ships');
-            //   chosenSquare.style.backgroundColor = 'green';
-            shipLocations.push(chosenSquare.innerText);
+    while (shipPositions.length < gameState.totalShips) {
+        const randomIndex = Math.floor(Math.random() * squares.length);
+        const square = squares[randomIndex];
+
+        if (!square.classList.contains('ships')) {
+            square.classList.add('ships');
+            shipPositions.push(square.innerText);
         }
     }
 }

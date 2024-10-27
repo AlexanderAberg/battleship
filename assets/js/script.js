@@ -87,21 +87,35 @@ function placeShips() {
             shipPositions.push(square.innerText);
         }
     }
+
+    return shipPositions;
 }
 
-//Computer ships placement
-shipLocation();
+// Handle square click
+function handleSquareClick(event) {
+    if (gameState.gameOver) {
+        updateInfoDisplay('Game is over! Click New Game to play again.');
+        return;
+    }
 
-//Hit or miss
-function didHit(square) {
-    let index = Array.from(squares).indexOf(square);
-    shipStatus[index] = 'hit';
-}
+    const square = event.target;
 
+    // Prevent clicking already tried squares
+    if (square.classList.contains('hit') || square.classList.contains('miss')) {
+        updateInfoDisplay('You already tried this square! Pick another one.');
+        return;
+    }
 
-const checkGameState = () => {
-    if (shipsSunk === 5) {
-        gameOver = true;
+    if (square.classList.contains('ships')) {
+        square.style.backgroundColor = 'red';
+        square.classList.add('hit');
+        gameState.shipsSunk++;
+
+        if (gameState.shipsSunk === gameState.totalShips) {
+            handleGameOver(true);
+        } else {
+            updateInfoDisplay(`Hit! You found a ship! ${gameState.totalShips - gameState.shipsSunk} ships remaining. ${gameState.maxMisses - gameState.missCount} attempts left.`);
+        }
     } else {
         gameOver = false;
     }

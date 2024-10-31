@@ -117,37 +117,35 @@ function handleSquareClick(event) {
             updateInfoDisplay(`Hit! You found a ship! ${gameState.totalShips - gameState.shipsSunk} ships remaining. ${gameState.maxMisses - gameState.missCount} attempts left.`);
         }
     } else {
-        gameOver = false;
+        square.style.backgroundColor = 'black';
+        square.classList.add('miss');
+        gameState.missCount++;
+
+        if (gameState.missCount >= gameState.maxMisses) {
+            handleGameOver(false);
+        } else {
+            updateInfoDisplay(`Miss! ${gameState.maxMisses - gameState.missCount} attempts remaining. Find ${gameState.totalShips - gameState.shipsSunk} more ships.`);
+        }
     }
-};
-
-
-//Get the current victories from the DOM and increase it with 1
-// function incrementVictory() {
-//   let oldVictory = parseInt(document.getElementById('victory').innertext);
-//   document.getElementById('victory').innerText = ++oldScore;
-// }
-
-//Get the current defeats from the DOM and increase it with 1
-// function incrementDefeat() {
-// let oldDefeat = parseInt(document.getElementById('defeat').innertext);
-//  document.getElementById('defeat').innerText = ++oldScore;
-// }
-
-//Starting the game
-function StartGame() {
-
 }
 
-function handleClick(e) {
-    if (!gameOver) {
-        if (e.target.classList.contains('ships')) {
-            e.target.classList.add('hit');
-            infoDisplay.textContent = ('You hit an enemy ship');
-            if (isShipSunk(e.target)) {
-                shipsSunk++;
-                checkGameState(shipsSunk === 5);
-                gameOver = true;
+// Handle game over
+function handleGameOver(isVictory) {
+    gameState.gameOver = true;
+    if (isVictory) {
+        gameState.victories++;
+        document.getElementById('victory').textContent = gameState.victories;
+        updateInfoDisplay('Congratulations! You found all ships! Click New Game to play again.');
+    } else {
+        gameState.defeats++;
+        document.getElementById('defeat').textContent = gameState.defeats;
+        updateInfoDisplay('Game Over! Out of attempts! Click New Game to try again.');
+
+        // Reveal remaining ships
+        const squares = document.getElementsByClassName('square');
+        for (let square of squares) {
+            if (square.classList.contains('ships') && !square.classList.contains('hit')) {
+                square.className = 'square missed-ship';
             }
         }
     }

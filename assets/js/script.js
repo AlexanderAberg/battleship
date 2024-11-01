@@ -37,8 +37,8 @@ function initializeGame() {
 
     // Reset board colors
     const squares = document.getElementsByClassName('square');
-for (let square of squares) {
-    square.style.backgroundColor = 'blue';
+    for (let square of squares) {
+        square.style.backgroundColor = 'blue';
         square.classList.remove('ships', 'hit', 'miss');
     }
 
@@ -151,9 +151,8 @@ function handleGameOver(isVictory) {
     }
 }
 
-function checkShip(ship, shipLength) {
-    if (user === 'player') {
-        infoDisplay.textContent = `You sank the enemies ship ${ship}`;
-        playerHits = userHits.filter(ship => ship !== ship);
-    }
+// Update info display
+function updateInfoDisplay(message) {
+    const infoDisplay = document.getElementById('info-display');
+    infoDisplay.textContent = message;
 }

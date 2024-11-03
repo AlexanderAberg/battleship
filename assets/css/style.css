@@ -5,14 +5,18 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(197, 202, 201);
+    margin: 0;
+    padding: 15px;
 }
 
-/* Log info */
+/* Logo info */
 #logo {
     font-size: 4.7em;
     font-family: "Jacquard 12", system-ui;
     display: flex;
     justify-content: space-evenly;
+    text-align: center;
+    margin: 20px 0;
 }
 
 /* Heading for rules and ships board container */
@@ -21,6 +25,16 @@ h2 {
     display: flex;
     justify-content: space-evenly;
     font-family: "Jacquard 12", system-ui;
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* Rules paragraph */
+p {
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.6;
+    padding: 0 15px;
 }
 
 /* Container for victories and defeats */
@@ -28,12 +42,21 @@ h2 {
     border: 2px solid darkmagenta;
     border-width: 3px;
     margin: 10px auto;
-    width: 285px;
+    width: min(285px, 90%);
     font-size: 1rem;
-    max-height: 100px;
+    padding: 10px;
     display: flex;
-    justify-content: space-evenly;
-    display: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.battles {
+    margin: 0;
+    padding: 5px;
 }
 
 #start {

@@ -133,23 +133,80 @@ p {
     background-color: green !important;
 }
 
-/* Heading for ships board container */
-h2 {
-    display: flex;
-    justify-content: space-evenly;
+/* Media queries */
+@media screen and (max-width: 768px) {
+    #logo {
+        font-size: 3.5em;
+    }
 
+    h2 {
+        font-size: 2.2em;
+    }
+
+    .victory-board {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    #info-display {
+        font-size: 1.1em;
+        padding: 12px;
+    }
 }
 
-/* Container board about ships left */
-.ships-left {
-    border: 2px solid darkmagenta;
-    border-width: 3px;
-    margin: 10px auto;
-    width: 285px;
-    font-size: 1rem;
-    max-height: 100px;
-    display: flex;
-    justify-content: space-evenly;
+@media screen and (max-width: 480px) {
+    #logo {
+        font-size: 2.8em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .victory-board {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .battles {
+        margin: 5px 0;
+    }
+
+    #start {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .square {
+        width: 20px;
+        height: 20px;
+        margin: 1px;
+    }
+
+    #info-display {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .item-a {
+        gap: 2px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #logo {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .square {
+        width: 18px;
+        height: 18px;
+    }
 }
 
 /* Commenting out board 2 related code

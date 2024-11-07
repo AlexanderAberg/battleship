@@ -101,28 +101,36 @@ p {
     display: flex;
     justify-content: center;
     gap: 5px;
-
+    margin: 2px 0;
 }
 
-
-.grid-container>div {
-    background-color: #ddd;
+.square {
+    width: 24px;
+    height: 24px;
+    background-color: blue !important;
     border: 1px solid #999;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    color: white;
 }
 
-.item-a {
-    display: flex;
+.square:hover {
+    opacity: 0.8;
 }
 
-.item-a>div {
-    border: 1px solid black;
-    width: 24px;
-    height: 24px;
-    background-color: blue;
-    color: blue;
+.square.hit {
+    background-color: red !important;
+}
+
+.square.miss {
+    background-color: black !important;
+}
+
+.square.missed-ship {
+    background-color: green !important;
 }
 
 /* Heading for ships board container */

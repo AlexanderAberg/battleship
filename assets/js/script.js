@@ -39,7 +39,7 @@ function initializeGame() {
     const squares = document.getElementsByClassName('square');
     for (let square of squares) {
         square.style.backgroundColor = 'blue';
-        square.classList.remove('ships', 'hit', 'miss');
+        square.classList.remove('ships', 'hit', 'miss', 'missed-ship');
     }
 
     // Show the victory board
@@ -48,6 +48,12 @@ function initializeGame() {
     // Update score display
     document.getElementById('victory').textContent = gameState.victories;
     document.getElementById('defeat').textContent = gameState.defeats;
+
+    // Hide ship placers
+    const shipPlacers = document.querySelectorAll('.ship-placer div');
+    for (let shipPlacer of shipPlacers) {
+        shipPlacer.style.display = 'none';
+    }
 }
 
 // Setup event listeners
@@ -64,6 +70,52 @@ function setupEventListeners() {
     for (let square of squares) {
         square.addEventListener('click', handleSquareClick);
     }
+
+    // Ship placement
+    const shipElements = document.querySelectorAll('.ship-placer div');
+    for (let shipElement of shipElements) {
+        shipElement.addEventListener('dragover', preventDefault);
+        shipElement.addEventListener('drop', placeShip);
+    }
+}
+
+// Prevent default drag behaviour
+function preventDefault(e) {
+    e.preventDefault();
+}
+
+// PlaceShip function
+function placeShip(e) {
+    const shipElement = e.target;
+    const shipName = shipElement.id;
+    const shipSize = parseInt(shipElement.getAttribute('data-size'));
+
+    const squares = document.getElementsByClassName('square large');
+    let placed = false;
+
+    for (let i = 0; i < squares.length && !placed; i++) {
+        const square = squares[i];
+        if (!square.classList.contains('ships')) {
+            square.classList.add('ships');
+            square.textContent = shipName;
+            square.style.backgroundColor = 'black';
+
+            // Place the ship horizontally
+            for (let j = 0; j < shipSize; j++) {
+                if (!square.classList.contains(`ship-${j}`)) {
+                    square.classList.add(`ship-${j}`);
+                }
+            }
+
+            placed = true;
+        }
+    }
+
+    if (!placed) {
+        alert(`Couldn't place ${shipName}. Not enough space.`);
+    } else {
+        updateInfoDisplay(`Placed ${shipName} successfully.`);
+    }
 }
 
 // Start the game
@@ -71,6 +123,7 @@ function startGame() {
     gameState.isGameStarted = true;
     gameState.ships = placeShips();
     updateInfoDisplay(`Find all 5 ships! You have ${gameState.maxMisses} attempts.`);
+    showShips();
 }
 
 // Place ships randomly on the board
@@ -91,7 +144,7 @@ function placeShips() {
     return shipPositions;
 }
 
-// Handle square click
+// HandleSquareClick function
 function handleSquareClick(event) {
     if (gameState.gameOver) {
         updateInfoDisplay('Game is over! Click New Game to play again.');
@@ -109,12 +162,24 @@ function handleSquareClick(event) {
     if (square.classList.contains('ships')) {
         square.style.backgroundColor = 'red';
         square.classList.add('hit');
-        gameState.shipsSunk++;
+
+        let allHit = true;
+        for (let i = 0; i < shipSize; i++) {
+            if (!square.classList.contains(`ship-${i}`)) {
+                allHit = false;
+                break;
+            }
+        }
+
+        if (allHit) {
+            gameState.shipsSunk++;
+            square.textContent = '';
+        }
 
         if (gameState.shipsSunk === gameState.totalShips) {
             handleGameOver(true);
         } else {
-            updateInfoDisplay(`Hit! You found a ship! ${gameState.totalShips - gameState.shipsSunk} ships remaining. ${gameState.maxMisses - gameState.missCount} attempts left.`);
+            updateInfoDisplay(`Hit! You found a part of a ship! ${gameState.totalShips - gameState.shipsSunk} ships remaining. ${gameState.maxMisses - gameState.missCount} attempts left.`);
         }
     } else {
         square.style.backgroundColor = 'black';

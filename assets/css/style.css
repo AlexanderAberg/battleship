@@ -224,7 +224,13 @@ p {
 */
 
 /* Ships information */
-/*
+
+.ship {
+    width: auto;
+    height: 24;
+    margin-bottom: 10px;
+}
+
 #destroyer {
     height: 24px;
     width: 48px;

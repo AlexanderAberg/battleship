@@ -29,138 +29,157 @@
         where you place your ships also.
     </p>
 
-    <!-- Board for victory, defeats and starting the game -->
-    <div class='victory-board'>
-        <p class='battles'>Victories: <span id=victory>0</span></p>
-        <button id='start'>Start Game</button>
-        <p class='battles'>Defeats: <span id=defeat>0</span></p>
-    </div>
+    <div class="game-container">
+        <div class="ship-placer">
+            <div id="destroyer" class="ship" data-size="2"></div>
+            <div id="submarine" class="ship" data-size="3"></div>
+            <div id="cruiser" class="ship" data-size="3"></div>
+            <div id="battleship" class="ship" data-size="4"></div>
+            <div id="carrier" class="ship" data-size="5"></div>
+        </div>
 
-    <!-- The gameboard for the player to attack the computer-->
-    <div class='game-board1'>
-        <div class=item-a>
-            <div class='square'>A0</div>
-            <div class='square'>A1</div>
-            <div class='square'>A2</div>
-            <div class='square'>A3</div>
-            <div class='square'>A4</div>
-            <div class='square'>A5</div>
-            <div class='square'>A6</div>
-            <div class='square'>A7</div>
-            <div class='square'>A8</div>
-            <div class='square'>A9</div>
+        <!-- Board for victory, defeats and starting the game -->
+        <div class='victory-board'>
+            <p class='battles'>Victories: <span id=victory>0</span></p>
+            <button id='start'>New Game</button>
+            <p class='battles'>Defeats: <span id=defeat>0</span></p>
         </div>
-        <div class=item-a>
-            <div class='square'>B0</div>
-            <div class='square'>B1</div>
-            <div class='square'>B2</div>
-            <div class='square'>B3</div>
-            <div class='square'>B4</div>
-            <div class='square'>B5</div>
-            <div class='square'>B6</div>
-            <div class='square'>B7</div>
-            <div class='square'>B8</div>
-            <div class='square'>B9</div>
-        </div>
-        <div class=item-a>
-            <div class='square'>C0</div>
-            <div class='square'>C1</div>
-            <div class='square'>C2</div>
-            <div class='square'>C3</div>
-            <div class='square'>C4</div>
-            <div class='square'>C5</div>
-            <div class='square'>C6</div>
-            <div class='square'>C7</div>
-            <div class='square'>C8</div>
-            <div class='square'>C9</div>
-        </div>
-        <div class=item-a>
-            <div class='square'>D0</div>
-            <div class='square'>D1</div>
-            <div class='square'>D2</div>
-            <div class='square'>D3</div>
-            <div class='square'>D4</div>
-            <div class='square'>D5</div>
-            <div class='square'>D6</div>
-            <div class='square'>D7</div>
-            <div class='square'>D8</div>
-            <div class='square'>D9</div>
-        </div>
-        <div class=item-a>
-            <div class='square'>E0</div>
-            <div class='square'>E1</div>
-            <div class='square'>E2</div>
-            <div class='square'>E3</div>
-            <div class='square'>E4</div>
-            <div class='square'>E5</div>
-            <div class='square'>E6</div>
-            <div class='square'>E7</div>
-            <div class='square'>E8</div>
-            <div class='square'>E9</div>
-        </div>
-        <div class=item-a>
-            <div class='square'>F0</div>
-            <div class='square'>F1</div>
-            <div class='square'>F2</div>
-            <div class='square'>F3</div>
-            <div class='square'>F4</div>
-            <div class='square'>F5</div>
-            <div class='square'>F6</div>
-            <div class='square'>F7</div>
-            <div class='square'>F8</div>
-            <div class='square'>F9</div>
-        </div>
-        <div class=item-a>
-            <div class='square'>G0</div>
-            <div class='square'>G1</div>
-            <div class='square'>G2</div>
-            <div class='square'>G3</div>
-            <div class='square'>G4</div>
-            <div class='square'>G5</div>
-            <div class='square'>G6</div>
-            <div class='square'>G7</div>
-            <div class='square'>G8</div>
-            <div class='square'>G9</div>
-        </div>
-        <div class=item-a>
-            <div class='square'>H0</div>
-            <div class='square'>H1</div>
-            <div class='square'>H2</div>
-            <div class='square'>H3</div>
-            <div class='square'>H4</div>
-            <div class='square'>H5</div>
-            <div class='square'>H6</div>
-            <div class='square'>H7</div>
-            <div class='square'>H8</div>
-            <div class='square'>H9</div>
-        </div>
-        <div class=item-a>
-            <div class='square'>I0</div>
-            <div class='square'>I1</div>
-            <div class='square'>I2</div>
-            <div class='square'>I3</div>
-            <div class='square'>I4</div>
-            <div class='square'>I5</div>
-            <div class='square'>I6</div>
-            <div class='square'>I7</div>
-            <div class='square'>I8</div>
-            <div class='square'>I9</div>
-        </div>
-        <div class=item-a>
-            <div class='square'>J0</div>
-            <div class='square'>J1</div>
-            <div class='square'>J2</div>
-            <div class='square'>J3</div>
-            <div class='square'>J4</div>
-            <div class='square'>J5</div>
-            <div class='square'>J6</div>
-            <div class='square'>J7</div>
-            <div class='square'>J8</div>
-            <div class='square'>J9</div>
-        </div>
-    </div>
 
-    <!--- <div class='ships-left-container'>
+        <!-- The gameboard for the player to attack the computer-->
+        <div class='game-board'>
+            <div class=item-a>
+                <div class='square large'>A0</div>
+                <div class='square large'>A1</div>
+                <div class='square large'>A2</div>
+                <div class='square large'>A3</div>
+                <div class='square large'>A4</div>
+                <div class='square large'>A5</div>
+                <div class='square large'>A6</div>
+                <div class='square large'>A7</div>
+                <div class='square large'>A8</div>
+                <div class='square large'>A9</div>
+            </div>
+            <div class=item-a>
+                <div class='square large'>B0</div>
+                <div class='square large'>B1</div>
+                <div class='square large'>B2</div>
+                <div class='square large'>B3</div>
+                <div class='square large'>B4</div>
+                <div class='square large'>B5</div>
+                <div class='square large'>B6</div>
+                <div class='square large'>B7</div>
+                <div class='square large'>B8</div>
+                <div class='square large'>B9</div>
+            </div>
+            <div class=item-a>
+                <div class='square large'>C0</div>
+                <div class='square large'>C1</div>
+                <div class='square large'>C2</div>
+                <div class='square large'>C3</div>
+                <div class='square large'>C4</div>
+                <div class='square large'>C5</div>
+                <div class='square large'>C6</div>
+                <div class='square large'>C7</div>
+                <div class='square large'>C8</div>
+                <div class='square large'>C9</div>
+            </div>
+            <div class=item-a>
+                <div class='square large'>D0</div>
+                <div class='square large'>D1</div>
+                <div class='square large'>D2</div>
+                <div class='square large'>D3</div>
+                <div class='square large'>D4</div>
+                <div class='square large'>D5</div>
+                <div class='square large'>D6</div>
+                <div class='square large'>D7</div>
+                <div class='square large'>D8</div>
+                <div class='square large'>D9</div>
+            </div>
+            <div class=item-a>
+                <div class='square large'>E0</div>
+                <div class='square large'>E1</div>
+                <div class='square large'>E2</div>
+                <div class='square large'>E3</div>
+                <div class='square large'>E4</div>
+                <div class='square large'>E5</div>
+                <div class='square large'>E6</div>
+                <div class='square large'>E7</div>
+                <div class='square large'>E8</div>
+                <div class='square large'>E9</div>
+            </div>
+            <div class=item-a>
+                <div class='square large'>F0</div>
+                <div class='square large'>F1</div>
+                <div class='square large'>F2</div>
+                <div class='square large'>F3</div>
+                <div class='square large'>F4</div>
+                <div class='square large'>F5</div>
+                <div class='square large'>F6</div>
+                <div class='square large'>F7</div>
+                <div class='square large'>F8</div>
+                <div class='square large'>F9</div>
+            </div>
+            <div class=item-a>
+                <div class='square large'>G0</div>
+                <div class='square large'>G1</div>
+                <div class='square large'>G2</div>
+                <div class='square large'>G3</div>
+                <div class='square large'>G4</div>
+                <div class='square large'>G5</div>
+                <div class='square large'>G6</div>
+                <div class='square large'>G7</div>
+                <div class='square large'>G8</div>
+                <div class='square large'>G9</div>
+            </div>
+            <div class=item-a>
+                <div class='square large'>H0</div>
+                <div class='square large'>H1</div>
+                <div class='square large'>H2</div>
+                <div class='square large'>H3</div>
+                <div class='square large'>H4</div>
+                <div class='square large'>H5</div>
+                <div class='square large'>H6</div>
+                <div class='square large'>H7</div>
+                <div class='square large'>H8</div>
+                <div class='square large'>H9</div>
+            </div>
+            <div class=item-a>
+                <div class='square large'>I0</div>
+                <div class='square large'>I1</div>
+                <div class='square large'>I2</div>
+                <div class='square large'>I3</div>
+                <div class='square large'>I4</div>
+                <div class='square large'>I5</div>
+                <div class='square large'>I6</div>
+                <div class='square large'>I7</div>
+                <div class='square large'>I8</div>
+                <div class='square large'>I9</div>
+            </div>
+            <div class=item-a>
+                <div class='square large'>J0</div>
+                <div class='square large'>J1</div>
+                <div class='square large'>J2</div>
+                <div class='square large'>J3</div>
+                <div class='square large'>J4</div>
+                <div class='square large'>J5</div>
+                <div class='square large'>J6</div>
+                <div class='square large'>J7</div>
+                <div class='square large'>J8</div>
+                <div class='square large'>J9</div>
+            </div>
+
+            <div id="info-display"></div>
+
+            <!-- Ships -->
+            <div class="ship destroyer"></div>
+            <div class="ship submarine"></div>
+            <div class="ship cruiser"></div>
+            <div class="ship battleship"></div>
+            <div class="ship carrier"></div>
+
+        </div>
+
+        <!--- <div class='ships-left-container'>
         <h2>Ships Left</h2>
         <div class='ships-left'>
             <p>Your Ships left:</p>
@@ -168,7 +187,7 @@
         </div>
     </div> -->
 
-    <!-- <div class='ships-container'>
+        <!-- <div class='ships-container'>
         <div id='carrier' draggable='true'>Carrier:</div>
         <div id='battleship' draggable='true'>Battleship:</div>
         <div id='cruiser' draggable='true'>Cruiser:</div>
@@ -176,7 +195,7 @@
         <div id='destroyer' draggable='true'>Destroyer:</div>
     </div> -->
 
-    <!--Commenting out board 2 for time reasons.
+        <!--Commenting out board 2 for time reasons.
         <div class='game-board2'>
             <div class=item-b>
                 <div>A0</div>
@@ -301,8 +320,7 @@
         </div> -->
 
 
-    <script src='assets/js/script.js'></script>
-
+        <script src='assets/js/script.js'></script>
 </body>
 
 </html>

@@ -209,20 +209,6 @@ p {
     }
 }
 
-/* Commenting out board 2 related code
-.item-b {
-    display: flex;
-}
-
-.item-b>div {
-    border: 1px solid black;
-    width: 24px;
-    height: 24px;
-    background-color: blue;
-    color: blue;
-}
-*/
-
 /* Ships information */
 
 .ship {

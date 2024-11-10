@@ -8,7 +8,7 @@ let gameState = {
     victories: 0,
     defeats: 0,
     missCount: 0,
-    maxMisses: 20
+    maxMisses: 30
 };
 
 // Wait for DOM to load
@@ -41,7 +41,7 @@ function initializeGame() {
         victories: gameState.victories || 0,
         defeats: gameState.defeats || 0,
         missCount: 0,
-        maxMisses: 20
+        maxMisses: 30
     };
 
     // Reset board colors
@@ -204,7 +204,7 @@ function handleSquareClick(event) {
     const square = event.target;
 
     if (square.classList.contains('hit') || square.classList.contains('miss')) {
-        updateInfoDisplay('You already tried this square! Pick another one.');
+        updateInfoDisplay('You already attacked this square! Pick another one.');
         return;
     }
 
@@ -212,14 +212,16 @@ function handleSquareClick(event) {
         square.style.backgroundColor = 'red';
         square.classList.add('hit');
 
-        const hitShip = gameState.ships.find(ship => ship.positions.includes(Array.from(squares).indexOf(square)));
-        if (hitShip) {
-            const allHit = hitShip.positions.every(pos => squares[pos].classList.contains('hit'));
+        const hitShipName = Array.from(square.classList).find(cls => Object.keys(shipSizes).includes(cls));
+        if (hitShipName) {
+            const shipSquares = document.querySelectorAll(`.${hitShipName}`);
+            const allHit = Array.from(shipSquares).every(sq => sq.classList.contains('hit'));
+
             if (allHit) {
                 gameState.shipsSunk++;
-                updateInfoDisplay(`You sank the ${hitShip.name}! ${gameState.totalShips - gameState.shipsSunk} ships remaining.`);
+                updateInfoDisplay(`You sank the ${hitShipName}! ${gameState.totalShips - gameState.shipsSunk} ships remaining.`);
             } else {
-                updateInfoDisplay(`Hit! You found a part of a ship! ${gameState.totalShips - gameState.shipsSunk} ships remaining.`);
+                updateInfoDisplay(`Hit! You found a part of the ${hitShipName}! ${gameState.totalShips - gameState.shipsSunk} ships remaining.`);
             }
         }
 

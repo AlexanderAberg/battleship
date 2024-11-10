@@ -20,6 +20,15 @@ document.addEventListener('DOMContentLoaded', function () {
     startGame();
 });
 
+// Sizes of the ships
+const shipSizes = {
+    destroyer: 2,
+    submarine: 3,
+    cruiser: 3,
+    battleship: 4,
+    carrier: 5
+};
+
 // Initialize games
 function initializeGame() {
     // Reset game state but keep scores
@@ -131,17 +140,58 @@ function placeShips() {
     const squares = document.getElementsByClassName('square');
     const shipPositions = [];
 
-    while (shipPositions.length < gameState.totalShips) {
-        const randomIndex = Math.floor(Math.random() * squares.length);
-        const square = squares[randomIndex];
+    for (const [shipName, size] of Object.entries(shipSizes)) {
+        let placed = false;
+        while (!placed) {
+            const startIndex = Math.floor(Math.random() * squares.length);
+            const direction = Math.random() < 0.5 ? 'horizontal' : 'vertical';
 
-        if (!square.classList.contains('ships')) {
-            square.classList.add('ships');
-            shipPositions.push(square.innerText);
+            if (canPlaceShip(squares, startIndex, size, direction)) {
+                placeShipOnBoard(squares, startIndex, size, direction, shipName);
+                shipPositions.push({
+                    name: shipName,
+                    positions: getShipPositions(startIndex, size, direction)
+                });
+                placed = true;
+            }
         }
     }
 
     return shipPositions;
+}
+
+
+function canPlaceShip(squares, startIndex, size, direction) {
+    const width = 10;
+
+    for (let i = 0; i < size; i++) {
+        const index = direction === 'horizontal' ? startIndex + i : startIndex + i * width;
+        if (index >= squares.length || squares[index].classList.contains('ships')) {
+            return false;
+        }
+        if (direction === 'horizontal' && startIndex % width + size > width) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function placeShipOnBoard(squares, startIndex, size, direction, shipName) {
+    const width = 10;
+    for (let i = 0; i < size; i++) {
+        const index = direction === 'horizontal' ? startIndex + i : startIndex + i * width;
+        squares[index].classList.add('ships', shipName);
+    }
+}
+
+function getShipPositions(startIndex, size, direction) {
+    const positions = [];
+    const width = 10;
+    for (let i = 0; i < size; i++) {
+        const index = direction === 'horizontal' ? startIndex + i : startIndex + i * width;
+        positions.push(index);
+    }
+    return positions;
 }
 
 // HandleSquareClick function
@@ -153,7 +203,6 @@ function handleSquareClick(event) {
 
     const square = event.target;
 
-    // Prevent clicking already tried squares
     if (square.classList.contains('hit') || square.classList.contains('miss')) {
         updateInfoDisplay('You already tried this square! Pick another one.');
         return;
@@ -163,23 +212,19 @@ function handleSquareClick(event) {
         square.style.backgroundColor = 'red';
         square.classList.add('hit');
 
-        let allHit = true;
-        for (let i = 0; i < shipSize; i++) {
-            if (!square.classList.contains(`ship-${i}`)) {
-                allHit = false;
-                break;
+        const hitShip = gameState.ships.find(ship => ship.positions.includes(Array.from(squares).indexOf(square)));
+        if (hitShip) {
+            const allHit = hitShip.positions.every(pos => squares[pos].classList.contains('hit'));
+            if (allHit) {
+                gameState.shipsSunk++;
+                updateInfoDisplay(`You sank the ${hitShip.name}! ${gameState.totalShips - gameState.shipsSunk} ships remaining.`);
+            } else {
+                updateInfoDisplay(`Hit! You found a part of a ship! ${gameState.totalShips - gameState.shipsSunk} ships remaining.`);
             }
-        }
-
-        if (allHit) {
-            gameState.shipsSunk++;
-            square.textContent = '';
         }
 
         if (gameState.shipsSunk === gameState.totalShips) {
             handleGameOver(true);
-        } else {
-            updateInfoDisplay(`Hit! You found a part of a ship! ${gameState.totalShips - gameState.shipsSunk} ships remaining. ${gameState.maxMisses - gameState.missCount} attempts left.`);
         }
     } else {
         square.style.backgroundColor = 'black';

@@ -1,8 +1,7 @@
 # Battleship
 
 Battleship is a game based on the board game.
-In the board game you have two boards with 10x10 squares and you will try to hit the enemies 5 different ships before they hit yours, but this game will not be on that level yet.
-
+In the board game you have one board with 10x10 squares and you will try to hit the enemies 5 different ships before you are out of chances.
 <img src="assets/images/amiresponsive.png" alt='Responsive Screens'>
 
 # UX
@@ -13,22 +12,19 @@ The expected visitor is:
 - Visitors that wants to play this game in particular no matter if they played it before or not.
 
 Visitors goals are:
-- See pictures and information about colourful tea and get inspired.
-- To see what exists in the world of tea.
+- Be able to play Battlefield.
+- Keep track on how many victories and defeats.
 - Contact the people behind the website.
 
 How Battleship fills the needs:
 - You can play the game on the website.
 - You can read the instructions on the page if you are new to the game.
-- You will in the future be able to follow scores and how many ships left.
-- Even if the game is simplified will the real experience come later.
 
 
 ### Business Goals
 The Business Goals are:
 - To make a well known game.
-- Get in touch with other tea drinkers that are not satisfied with your normal tea.
-- If enough people will be aware the bigger chance that you will find the more rare tea in your city.
+- To get people interested in the game
 
 ### User Stories
 1. As a board game player I want to be able to play them online.
@@ -51,12 +47,8 @@ The Business Goals are:
 
 ### Features Left to Implement
 
-- There is many features that is currently commented out because they are not done yet.
 - You will in the future be able to have a second board where you can place your own ships that the enemy will attack.
-- In the future you will have normal sized ships instead of the current 1 square ships.
-- In the future there will be a victory board where you an see wins and defeats plus have a start button so you don't need to refresh the page to restart the game.
 - Will be a ships board where you can see ships to place and also where you will be able to se sunken ships for both you and the enemy.
-- In the future shouldn't be possible to continue shooting when all 5 ships are destroyed.
 
 ## Testing 
 

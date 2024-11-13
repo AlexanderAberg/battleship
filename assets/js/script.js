@@ -29,9 +29,11 @@ const shipSizes = {
     carrier: 5
 };
 
-// Initialize games
+/**  Initialize games
+ *  Reset game state but keep scores
+ * Function exists so the victories and defeats will increase
+ */
 function initializeGame() {
-    // Reset game state but keep scores
     gameState = {
         isGameStarted: false,
         shipsSunk: 0,
@@ -132,10 +134,10 @@ function startGame() {
     gameState.isGameStarted = true;
     gameState.ships = placeShips();
     updateInfoDisplay(`Find all 5 ships! You have ${gameState.maxMisses} attempts.`);
-    showShips();
 }
 
-// Place ships randomly on the board
+/* The 4 coming functions is related to ship placement, for example is the first function for random placements
+ */
 function placeShips() {
     const squares = document.getElementsByClassName('square');
     const shipPositions = [];

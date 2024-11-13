@@ -2,6 +2,7 @@
 
 Battleship is a game based on the board game.
 In the board game you have one board with 10x10 squares and you will try to hit the enemies 5 different ships before you are out of chances.
+
 <img src="assets/images/amiresponsive.png" alt='Responsive Screens'>
 
 # UX
@@ -32,6 +33,28 @@ The Business Goals are:
 0. If I don't know the game I expect to find out how to play.
 
 
+### Technologies Used
+
+- HTML - For how the website with the pages is built and planned 
+- CSS - For all the styling
+- JS - For the game to function as a game including its logic
+- Fonts - From Google Fonts
+- Education Tool- From the people at Codeinstitute and W3 School
+- Wireframe - From Balsamiq 
+- Favicons - Icon from freepik and converted with Favicon.io
+- Mockup - Generated at amiresponsive 
+- Colours I wanted to have colours that fit the old military style and therefore is pretty boring, I used Coolors to create my palette but did experiement by myself for my choices 
+- Google Devtools to check responsiveness and to check Lighthouse for Accessibility
+- GitHub for storing the project and deploying it
+- Gitpod for project development
+
+### Colours & Text
+
+- The colours are chosen to be clear so it is easy to see and bland to fit the military setting of the game, while the board is blue because the ocean is blue.
+- The text is supposed to be easy to understand and decently plain to also fit with the mi,itary setting of the game.
+- I used a font that I think fit for a historic background which the game has both from being from around WWI and that the warfare is very before GPS, radars and satelites.
+
+<img src="assets/images/battleship-palette.png" alt="Colour palette">
 ### Existing Features
 
 - __Page__
@@ -58,11 +81,11 @@ The Business Goals are:
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Falexanderaberg.github.io%2Fbattleship%2F#cl177c14).
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Falexanderaberg.github.io%2Fbattleship%2F).
 - CSS
-  - No errors but 1 warning were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falexanderaberg.github.io%2Fbattleship%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv) it got validated as CSS Stage 3 +SVG, the warning I ignore because I want the color and background-color to be the same, because I don't want the text to be seen before clicking a square!
+  - No errors when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falexanderaberg.github.io%2Fbattleship%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv) it got validated as CSS Stage 3 +SVG.
 - JS
-  - No errors was returned for JS, but 16 warnings, 8 undefined cariables and 3 unused variables when passing through the official [(Jigsaw) validator](https://jshint.com/) I will need to work on them in the future.
+  - No errors was returned for JS, but 16 warnings when passing through the official [(Jigsaw) validator](https://jshint.com/).
 
 
 <img src="assets/images/validator-html.png" alt='Validator html'>
@@ -71,9 +94,7 @@ The Business Goals are:
 
 ### Unfixed and fixed Bugs
 
-- Have some unresolved code in JS and some commented out code in all three languages.
-- With the help of the validator did I notice some small issues in the js that I fixed.
-- The page is working, but because of unsolved issues I haven't been able to implement more.
+- With the help of the validator did I notice some small issues that I fixed.
 - I got help with some bugs by mentor, slack and tutor.
 
 ### Quality Score through Google Devtools Lighthouse
@@ -96,18 +117,13 @@ The Business Goals are:
 
   - Link to the live version of the project can be found here: - https://alexanderaberg.github.io/battleship/ and to the gitHub page here : https://github.com/AlexanderAberg/battleship
 
+### Wireframe
 
-## Credits 
+- Used Balsamiq for Wireframe, the Wireframe has some content that is missing in the project because of lack of time, see also Features Left to Implement in this README, also the wireframe is not to scale especially computer.
 
-Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=search&page=1&position=24&uuid=1fab3cff-7977-4766-8a3e-e89762b82c90">'Icon by Umeicon'</a> and generated through https://favicon.io/favicon-converter/ 
-
-- Boards are created with the help of tutorial from W3schools, https://www.w3schools.com/css/css_grid.asp https://www.w3schools.com/css/css_grid_container.asp and https://www.w3schools.com/css/css_grid_item.asp.
-- The Tutor Roman helped me with the grid, it is mainly my own code but with his help.
-- Got help from Alex C on our Slack Team Group with the ships and also got some other suggestions on slack.
-- My mentor Rory Patrick has been much help with suggestion and ideas.
-- Template for this README is taken from my previous project Different Coloured Tea that in term got its template from Love Running and my mentors P1.
-- Got inspired and used/reused some code from https://codepen.io/patrycja-b/pen/EWRywX and https://www.youtube.com/watch?v=Ubh_k18sX4E&ab_channel=CodewithAniaKub%C3%B3w 
-- Got some inspiration from perplexity AI but the AI couldn't really help me with solving my issues and the swedish slack team also gave me similiar suggestions for the handleClick function but neither did help me sort that out.
+<img src="assets/images/wireframe-phone.png" alt='Wireframe for Phone'>
+<img src="assets/images/wireframe-tablet.png" alt='Wireframe for Tablet'>
+<img src="assets/images/wireframe-computer.png" alt='Wireframe for Computer'>
 
 
 ### Content 
@@ -121,33 +137,14 @@ Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=
 - Favicon is from https://www.freepik.com/icon/battleship_7445202#fromView=search&page=1&position=24&uuid=1fab3cff-7977-4766-8a3e-e89762b82c90 and converted from https://favicon.io/favicon-converter/ 
 - Responsive mockup from https://ui.dev/amiresponsive?url=https://alexanderaberg.github.io/battleship/ 
 
-### Wireframe
+## Credits 
 
-- Used Balsamiq for Wireframe, the Wireframe has some content that is missing in the project because of lack of time, see also Features Left to Implement in this README, also the wireframe is not to scale especially computer.
+Favicon from  <a href="https://www.freepik.com/icon/battleship_7445202#fromView=search&page=1&position=24&uuid=1fab3cff-7977-4766-8a3e-e89762b82c90">'Icon by Umeicon'</a> and generated through https://favicon.io/favicon-converter/ 
 
-<img src="assets/images/wireframe-phone.png" alt='Wireframe for Phone'>
-<img src="assets/images/wireframe-tablet.png" alt='Wireframe for Tablet'>
-<img src="assets/images/wireframe-computer.png" alt='Wireframe for Computer'>
-
-### Technologies Used
-
-- HTML - For how the website with the pages is built and planned 
-- CSS - For all the styling
-- JS - For the game to function as a game including its logic
-- Fonts - From Google Fonts
-- Education Tool- From the people at Codeinstitute and W3 School
-- Wireframe - From Balsamiq 
-- Favicons - Icon from freepik and converted with Favicon.io
-- Mockup - Generated at amiresponsive 
-- Colours I wanted to have colours that fit the old military style and therefore is pretty boring, I used Coolors to create my palette but did experiement by myself for my choices 
-- Google Devtools to check responsiveness and to check Lighthouse for Accessibility
-- GitHub for storing the project and deploying it
-- Gitpod for project development
-
-### Colours & Text
-
-- The colours are chosen to be clear so it is easy to see and bland to fit the military setting of the game, while the board is blue because the ocean is blue.
-- The text is supposed to be easy to understand and decently plain to also fit with the mi,itary setting of the game.
-- I used a font that I think fit for a historic background which the game has both from being from around WWI and that the warfare is very before GPS, radars and satelites.
-
-<img src="assets/images/battleship-palette.png" alt="Colour palette">
+- Boards are created with the help of tutorial from W3schools, https://www.w3schools.com/css/css_grid.asp https://www.w3schools.com/css/css_grid_container.asp and https://www.w3schools.com/css/css_grid_item.asp.
+- The Tutor Roman helped me with the grid, it is mainly my own code but with his help.
+- Got help from Alex C on our Slack Team Group with the ships and also got some other suggestions on slack.
+- Help and guidance from Ioan Zaharia from my team, here is his GitHub if you want to know who he is or contact him: https://github.com/zioan.
+- My mentor Rory Patrick has been much help with suggestion and ideas.
+- Template for this README is taken from my previous project Different Coloured Tea that in term got its template from Love Running and my mentors P1.
+- Got inspired and used/reused some code from https://codepen.io/patrycja-b/pen/EWRywX and https://www.youtube.com/watch?v=Ubh_k18sX4E&ab_channel=CodewithAniaKub%C3%B3w 

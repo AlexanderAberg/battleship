@@ -62,10 +62,11 @@ The Business Goals are:
 
 <img src="assets/images/phone-image.png" alt='Looks on phone'>
 
+
 - __Board__
   - You can see a 10x10 board that you can play on, it will be coloured red if you hit a ship and black if you miss.
+  
   <img src="assets/images/board.png" alt='board with 2 squares attacked, one of them with a ship'>
-
 
 
 ### Features Left to Implement
@@ -89,6 +90,7 @@ The Business Goals are:
 
 
 <img src="assets/images/validator-html.png" alt='Validator html'>
+
 <img src="assets/images/validator-css.png" alt='Validator css'>
 <img src="assets/images/validator-js.png" alt='Validator js'>
 
